@@ -48,10 +48,11 @@
     <EditText
         android:id="@+id/edit_readText"
         android:layout_width="300dp"
+        android:inputType="textMultiLine"
         android:layout_height="wrap_content"
         android:fontFamily="@font/gbold"
         android:hint="텍스트를 입력하세요."
-        android:inputType="text"
+        android:scrollHorizontally="false"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
