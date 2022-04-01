@@ -2,17 +2,14 @@ package com.example.csory
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import kotlinx.android.synthetic.main.activity_join.*
+import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_voice.*
 
-class JoinActivity : AppCompatActivity() {
+class voiceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_voice)
 
-        second.setOnClickListener {
 
-            // MainActivity에서 넘어온 Activity를 종료하고 싶으면
-            finish()
-        }
     }
 }
