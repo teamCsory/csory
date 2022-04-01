@@ -49,7 +49,7 @@
         android:id="@+id/edit_readText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-
+        android:fontFamily="@font/gbold"
         android:hint="텍스트를 입력하세요."
         android:inputType="text"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
