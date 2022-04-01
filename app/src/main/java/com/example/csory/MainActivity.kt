@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
             second.setOnClickListener {
-                val myIntent = Intent(this, VoiceActivity::class.java)
+                val myIntent = Intent(this, ::class.java)
                 startActivity(myIntent)
             }
     }
