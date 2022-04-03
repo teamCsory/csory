@@ -33,7 +33,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
     // 글자 읽어주기
     private fun Speech() {
         val text = edit_readText!!.text.toString().trim { it <= ' ' }
-        tts!!.setPitch(0.1.toFloat()) // 음량
+        tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(1.0.toFloat()) // 재생속도
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
