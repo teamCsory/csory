@@ -132,13 +132,13 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
                     SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "퍼미션 없음"
                     SpeechRecognizer.ERROR_NETWORK -> "네트워크 에러"
                     SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "네트웍 타임아웃"
-                    SpeechRecognizer.ERROR_NO_MATCH -> "찾을 수 없음"
-                    SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "RECOGNIZER가 바쁨"
+                    SpeechRecognizer.ERROR_NO_MATCH -> "다시 말해주세요"
+                    SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "버튼을 천천히 눌러주세요"
                     SpeechRecognizer.ERROR_SERVER -> "서버가 이상함"
                     SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "말하는 시간초과"
                     else -> "알 수 없는 오류임"
                 }
-                Toast.makeText(applicationContext, "에러가 발생하였습니다. : $message", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "error : $message", Toast.LENGTH_SHORT).show()
             }
 
             override fun onResults(results: Bundle?) {
