@@ -148,7 +148,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
 
                 if (matches != null) {
                     for (i in 0 until matches.size) {
-                        voice_text?.setText(matches!![i])
+                        voice_text.text = matches[i]
                     }
                 }
 
