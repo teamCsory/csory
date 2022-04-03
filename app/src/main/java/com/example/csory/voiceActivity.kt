@@ -1,6 +1,7 @@
 package com.example.csory
 
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Build
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -17,7 +18,8 @@ import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import android.widget.TextView
 import androidx.core.app.ActivityCompat
-import java.util.jar.Manifest
+import androidx.core.content.ContextCompat
+import android.Manifest
 
 
 class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
@@ -26,13 +28,8 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
     private var btn_speech: Button? = null
     private var tts: TextToSpeech? = null
 
-    var intent: Intent? = null
-    var mRecognizer: SpeechRecognizer? = null
-    var sttBtn: Button? = null
-    var textView: TextView? = null
-    val PERMISSION = 1
-    protected lateinit var onCreate: Unit
-    var savedInstanceState: Bundle? = null
+    private lateinit var speechRecognizer: SpeechRecognizer
+    private lateinit var recognitionListener: RecognitionListener
 
 
 
@@ -46,7 +43,19 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
         btn_speech!!.setOnClickListener(this)
         tts = TextToSpeech(this, this)
 
+        requestPermission()
 
+        var intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
+        intent.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, packageName)
+        intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ko-KR")
+
+        setListener()
+
+        btn_mike.setOnClickListener {
+            speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
+            speechRecognizer.setRecognitionListener(recognitionListener)
+            speechRecognizer.startListening(intent)
+        }
     }
 
     // 글자 읽어주기
@@ -97,70 +106,62 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
         super.onDestroy()
     }
 
-    private val listener: RecognitionListener = object : RecognitionListener() {
-        override fun onReadyForSpeech(params: Bundle?) {
-            Toast.makeText(getApplicationContext(), "음성인식을 시작합니다.", Toast.LENGTH_SHORT).show()
+    private fun requestPermission() {
+        if (Build.VERSION.SDK_INT >= 23 && ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
+            // 거부해도 계속 노출됨. ("다시 묻지 않음" 체크 시 노출 안됨.)
+            // 허용은 한 번만 승인되면 그 다음부터 자동으로 허용됨.
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECORD_AUDIO), 0)
         }
+    }
 
-        override fun onBeginningOfSpeech() {}
-        override fun onRmsChanged(rmsdB: Float) {}
-        override fun onBufferReceived(buffer: ByteArray?) {}
-        override fun onEndOfSpeech() {}
-        override fun onError(error: Int) {
-            val message: String
-            message = when (error) {
-                SpeechRecognizer.ERROR_AUDIO -> "오디오 에러"
-                SpeechRecognizer.ERROR_CLIENT -> "클라이언트 에러"
-                SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "퍼미션 없음"
-                SpeechRecognizer.ERROR_NETWORK -> "네트워크 에러"
-                SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "네트웍 타임아웃"
-                SpeechRecognizer.ERROR_NO_MATCH -> "찾을 수 없음"
-                SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "RECOGNIZER가 바쁨"
-                SpeechRecognizer.ERROR_SERVER -> "서버가 이상함"
-                SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "말하는 시간초과"
-                else -> "알 수 없는 오류임"
+    private fun setListener() {
+        recognitionListener = object: RecognitionListener {
+
+            override fun onReadyForSpeech(params: Bundle?) {
+                Toast.makeText(getApplicationContext(), "음성인식을 시작합니다.", Toast.LENGTH_SHORT).show()
             }
-            Toast.makeText(getApplicationContext(), "에러가 발생하였습니다. : $message", Toast.LENGTH_SHORT)
-                .show()
-        }
 
-        override fun onResults(results: Bundle) {
-            // 말을 하면 ArrayList에 단어를 넣고 textView에 단어를 이어줍니다.
-            val matches: ArrayList<String>? =
-                results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
-            if (matches != null) {
-                for (i in 0 until matches.size) {
-                    textView?.setText(matches[i])
+            override fun onBeginningOfSpeech() {}
+            override fun onRmsChanged(rmsdB: Float) {}
+            override fun onBufferReceived(buffer: ByteArray?) {}
+            override fun onEndOfSpeech() {}
+            override fun onError(error: Int) {
+                val message: String
+                message = when (error) {
+                    SpeechRecognizer.ERROR_AUDIO -> "오디오 에러"
+                    SpeechRecognizer.ERROR_CLIENT -> "클라이언트 에러"
+                    SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "퍼미션 없음"
+                    SpeechRecognizer.ERROR_NETWORK -> "네트워크 에러"
+                    SpeechRecognizer.ERROR_NETWORK_TIMEOUT -> "네트웍 타임아웃"
+                    SpeechRecognizer.ERROR_NO_MATCH -> "찾을 수 없음"
+                    SpeechRecognizer.ERROR_RECOGNIZER_BUSY -> "RECOGNIZER가 바쁨"
+                    SpeechRecognizer.ERROR_SERVER -> "서버가 이상함"
+                    SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "말하는 시간초과"
+                    else -> "알 수 없는 오류임"
                 }
+                Toast.makeText(getApplicationContext(), "에러가 발생하였습니다. : $message", Toast.LENGTH_SHORT)
+                    .show()
             }
+
+            override fun onResults(results: Bundle) {
+                // 말을 하면 ArrayList에 단어를 넣고 textView에 단어를 이어줍니다.
+                val matches: ArrayList<String>? =
+                    results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+
+                if (matches != null) {
+                    for (i in 0 until matches.size) {
+                        voice_text?.setText(matches!![i])
+                    }
+                }
+
+            }
+            override fun onPartialResults(partialResults: Bundle?) {}
+            override fun onEvent(eventType: Int, params: Bundle?) {}
         }
 
-        override fun onPartialResults(partialResults: Bundle?) {}
-        override fun onEvent(eventType: Int, params: Bundle?) {}
+
     }
 
-    init {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-        if (Build.VERSION.SDK_INT >= 23) {
-            // 퍼미션 체크
-            ActivityCompat.requestPermissions(
-                this,
-                arrayOf<String>(Manifest.permission.INTERNET, Manifest.permission.RECORD_AUDIO),
-                PERMISSION
-            )
-        }
-        textView = findViewById(R.id.voice_text) as TextView?
-        sttBtn = findViewById(R.id.btn_mike) as Button?
-        intent = Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH)
-        intent!!.putExtra(RecognizerIntent.EXTRA_CALLING_PACKAGE, getPackageName())
-        intent!!.putExtra(RecognizerIntent.EXTRA_LANGUAGE, "ko-KR")
-        sttBtn.setOnClickListener { v ->
-            mRecognizer = SpeechRecognizer.createSpeechRecognizer(this)
-            mRecognizer.setRecognitionListener(listener)
-            mRecognizer.startListening(intent)
-        }
-    }
 
 }
 
