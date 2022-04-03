@@ -56,6 +56,8 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
             speechRecognizer.setRecognitionListener(recognitionListener)
             speechRecognizer.startListening(intent)
         }
+
+
     }
 
     // 글자 읽어주기
