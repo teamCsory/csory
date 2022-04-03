@@ -8,7 +8,7 @@
 
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/phoneme"
+        android:id="@+id/btn_phoneme"
         android:layout_width="247dp"
         android:layout_height="155dp"
         android:layout_marginTop="200dp"
