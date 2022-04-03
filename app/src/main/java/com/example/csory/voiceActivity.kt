@@ -118,7 +118,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
         recognitionListener = object: RecognitionListener {
 
             override fun onReadyForSpeech(params: Bundle?) {
-                Toast.makeText(getApplicationContext(), "음성인식을 시작합니다.", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "음성인식을 시작합니다.", Toast.LENGTH_SHORT).show()
             }
 
             override fun onBeginningOfSpeech() {}
@@ -126,8 +126,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
             override fun onBufferReceived(buffer: ByteArray?) {}
             override fun onEndOfSpeech() {}
             override fun onError(error: Int) {
-                val message: String
-                message = when (error) {
+                val message: String = when (error) {
                     SpeechRecognizer.ERROR_AUDIO -> "오디오 에러"
                     SpeechRecognizer.ERROR_CLIENT -> "클라이언트 에러"
                     SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> "퍼미션 없음"
@@ -139,14 +138,13 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
                     SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> "말하는 시간초과"
                     else -> "알 수 없는 오류임"
                 }
-                Toast.makeText(getApplicationContext(), "에러가 발생하였습니다. : $message", Toast.LENGTH_SHORT)
-                    .show()
+                Toast.makeText(applicationContext, "에러가 발생하였습니다. : $message", Toast.LENGTH_SHORT).show()
             }
 
-            override fun onResults(results: Bundle) {
+            override fun onResults(results: Bundle?) {
                 // 말을 하면 ArrayList에 단어를 넣고 textView에 단어를 이어줍니다.
                 val matches: ArrayList<String>? =
-                    results.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION)
+                    results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) as ArrayList<String>
 
                 if (matches != null) {
                     for (i in 0 until matches.size) {
