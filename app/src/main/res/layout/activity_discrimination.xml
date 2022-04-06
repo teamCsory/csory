@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/purple"
     tools:context=".MainActivity">
-/.
+
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_phoneme"
@@ -14,7 +14,7 @@
         android:layout_marginTop="200dp"
         android:layout_weight="1"
         android:background="@drawable/white_btn"
-        android:fontFamily="@font/gmedium"
+        android:fontFamily="@font/gbold"
         android:gravity="center"
         android:text="음소"
         android:textColor="@color/black"
@@ -30,7 +30,7 @@
         android:layout_marginBottom="196dp"
         android:layout_weight="1"
         android:background="@drawable/white_btn"
-        android:fontFamily="@font/gmedium"
+        android:fontFamily="@font/gbold"
         android:gravity="center"
         android:text="단어"
         android:textColor="@color/black"

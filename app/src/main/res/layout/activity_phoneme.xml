@@ -1,11 +1,94 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/purple"
-    tools:context=".phonemeActivity">
+    tools:context=".MainActivity">
+    /.
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ga"
+        android:layout_width="173dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="144dp"
+        android:layout_weight="1"
+        android:background="@drawable/speakercircle"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_phoneme4"
+        android:layout_width="158dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="504dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="음소"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_phoneme3"
+        android:layout_width="158dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="504dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="음소"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_phoneme2"
+        android:layout_width="158dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="376dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="음소"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.873"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_phoneme"
+        android:layout_width="158dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="376dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="음소"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
