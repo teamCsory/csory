@@ -25,10 +25,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
 
     private var btn_ga: Button? = null
-    private var btn_phoneme: Button? = null
-    private var btn_phoneme2: Button? = null
-    private var btn_phoneme3: Button? = null
-    private var btn_phoneme4: Button? = null
     private var tts: TextToSpeech? = null
 
 
@@ -37,18 +33,15 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         setContentView(R.layout.activity_phoneme)
 
         //edit_readText = findViewById<View>(R.id.edit_readText) as EditText
-        btn_phoneme = findViewById<View>(R.id.btn_phoneme) as Button
-        btn_phoneme2 = findViewById<View>(R.id.btn_phoneme2) as Button
-        btn_phoneme3 = findViewById<View>(R.id.btn_phoneme3) as Button
-        btn_phoneme4 = findViewById<View>(R.id.btn_phoneme4) as Button
-        btn_speech!!.isEnabled = false
-        btn_speech!!.setOnClickListener(this)
+        btn_ga = findViewById<View>(R.id.btn_ga) as Button
+        btn_ga!!.isEnabled = false
+        btn_ga!!.setOnClickListener(this)
         tts = TextToSpeech(this, this)
     }
 
     // 글자 읽어주기
     private fun Speech() {
-        val text = edit_readText!!.text.toString().trim { it <= ' ' }
+        val text = btn_ga!!.text.toString().trim { it <= ' ' }
         tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(1.0.toFloat()) // 재생속도
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
@@ -64,12 +57,12 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             ) {
 
                 // 언어 데이터가 없거나, 지원하지 않는경우
-                btn_speech!!.isEnabled = false
+                btn_ga!!.isEnabled = false
                 Toast.makeText(this, "지원하지 않는 언어입니다.", Toast.LENGTH_SHORT).show()
             } else {
 
                 // 준비 완료
-                btn_speech!!.isEnabled = true
+                btn_ga!!.isEnabled = true
             }
         } else {
 
@@ -80,7 +73,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
     override fun onClick(view: View) {
         when (view.id) {
-            R.id.btn_speech -> Speech()
+            R.id.btn_ga -> Speech()
             else -> {
             }
         }
