@@ -34,6 +34,7 @@
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="44dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -65,13 +66,14 @@
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
-
         android:textColor="@color/black"
         android:textSize="44dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_phoneme4"
@@ -85,6 +87,7 @@
 
         android:textColor="@color/black"
         android:textSize="44dp"
+
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.873"
         app:layout_constraintStart_toStartOf="parent"

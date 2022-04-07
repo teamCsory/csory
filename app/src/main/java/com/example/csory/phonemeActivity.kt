@@ -1,18 +1,22 @@
 package com.example.csory
 
+//import android.content.ContentValues.TAG
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_phoneme.view.*
 import kotlinx.android.synthetic.main.activity_voice.*
 import java.util.*
 
+
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
-
+    private var TAG = "phonemeActivity"
     private var btn_ga: Button? = null
     private var tts: TextToSpeech? = null
     private var btn_phoneme: Button? = null
@@ -23,8 +27,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "1 + 2 = ?")
-                put("answer", "3")
+                //put("question", "1 + 2 = ?")
+                //put("answer", "3")
                 put("example1", "1")
                 put("example2", "3")
                 put("example3", "2")
@@ -33,8 +37,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "3 + 2 = ?")
-                put("answer", "5")
+                //put("question", "3 + 2 = ?")
+                //put("answer", "5")
                 put("example1", "4")
                 put("example2", "6")
                 put("example3", "5")
@@ -43,8 +47,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "3 + 3 = ?")
-                put("answer", "6")
+                //put("question", "3 + 3 = ?")
+                //put("answer", "6")
                 put("example1", "6")
                 put("example2", "1")
                 put("example3", "5")
@@ -53,8 +57,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "0 + 3 = ?")
-                put("answer", "3")
+                //put("question", "0 + 3 = ?")
+                //put("answer", "3")
                 put("example1", "1")
                 put("example2", "2")
                 put("example3", "4")
@@ -63,8 +67,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "4 + 2 = ?")
-                put("answer", "6")
+                //put("question", "4 + 2 = ?")
+                //put("answer", "6")
                 put("example1", "6")
                 put("example2", "4")
                 put("example3", "2")
@@ -73,8 +77,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "5 + 4 = ?")
-                put("answer", "9")
+                //put("question", "5 + 4 = ?")
+                //put("answer", "9")
                 put("example1", "8")
                 put("example2", "6")
                 put("example3", "7")
@@ -83,8 +87,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "4 + 4 = ?")
-                put("answer", "8")
+                //put("question", "4 + 4 = ?")
+                //put("answer", "8")
                 put("example1", "7")
                 put("example2", "1")
                 put("example3", "8")
@@ -93,8 +97,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "2 + 5 = ?")
-                put("answer", "7")
+                //put("question", "2 + 5 = ?")
+                //put("answer", "7")
                 put("example1", "7")
                 put("example2", "1")
                 put("example3", "5")
@@ -103,8 +107,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "1 + 4 = ?")
-                put("answer", "5")
+                //put("question", "1 + 4 = ?")
+                //put("answer", "5")
                 put("example1", "4")
                 put("example2", "5")
                 put("example3", "0")
@@ -113,8 +117,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                put("question", "3 + 1 = ?")
-                put("answer", "4")
+                //put("question", "3 + 1 = ?")
+                //put("answer", "4")
                 put("example1", "8")
                 put("example2", "3")
                 put("example3", "4")
@@ -123,8 +127,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         }
     )
     var problemNumber = 1
-    var question: String? = ""
-    var answer: String? = ""
+    //var question: String? = ""
+    //var answer: String? = ""
     var example1: String? = ""
     var example2: String? = ""
     var example3: String? = ""
@@ -145,8 +149,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme3 = findViewById(R.id.btn_phoneme3)
         btn_phoneme4 = findViewById(R.id.btn_phoneme4)
 
-        question = problems[problemNumber - 1]["question"] as String?
-        answer = problems[problemNumber - 1]["answer"] as String?
+        //question = problems[problemNumber - 1]["question"] as String?
+        //answer = problems[problemNumber - 1]["answer"] as String?
 
         example1 = problems[problemNumber - 1]["btn_phoneme"] as String?
         example2 = problems[problemNumber - 1]["btn_phoneme2"] as String?
@@ -159,10 +163,12 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme4?.setText(example4)
 
         showProblem()
+        setButton()
+
     }
-    fun showProblem() {
-        question = problems[problemNumber - 1]["question"] as String?
-        answer = problems[problemNumber - 1]["answer"] as String?
+    private fun showProblem() {
+        //question = problems[problemNumber - 1]["question"] as String?
+        //answer = problems[problemNumber - 1]["answer"] as String?
         example1 = problems[problemNumber - 1]["example1"] as String?
         example2 = problems[problemNumber - 1]["example2"] as String?
         example3 = problems[problemNumber - 1]["example3"] as String?
@@ -174,6 +180,65 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme4?.setText(example4)
     }
 
+
+    private fun setButton() {
+        btn_phoneme?.setOnClickListener() {
+            Log.d(TAG, "btn_phoneme")
+            example1?.let { Log.d(TAG, it) }
+            problemNumber += 1
+            showProblem()
+        }
+
+        btn_phoneme2?.setOnClickListener() {
+            Log.d(TAG, "btn_phoneme2")
+            example2?.let { Log.d(TAG, it) }
+            problemNumber += 1
+            showProblem()
+        }
+        btn_phoneme3?.setOnClickListener() {
+            Log.d(TAG, "btn_phoneme3")
+            example3?.let { Log.d(TAG, it) }
+            problemNumber += 1
+            showProblem()
+        }
+        btn_phoneme4?.setOnClickListener() {
+            Log.d(TAG, "btn_phoneme4")
+            example4?.let { Log.d(TAG, it) }
+            problemNumber += 1
+            showProblem()
+        }
+
+    }
+
+    /*
+    private fun btn_phonemeClicked(v: View?) {
+        Log.d(TAG, "btn_phoneme2Clicked")
+        example1?.let { Log.d(TAG, it) }
+        problemNumber += 1
+        showProblem()
+    }
+
+    private fun btn_phoneme2Clicked(v: View?) {
+        Log.d(TAG, "btn_phoneme2Clicked")
+        example2?.let { Log.d(TAG, it) }
+        problemNumber += 1
+        showProblem()
+    }
+
+    private fun btn_phoneme3Clicked(v: View?) {
+        Log.d(TAG, "btn_phoneme3Clicked")
+        example3?.let { Log.d(TAG, it) }
+        problemNumber += 1
+        showProblem()
+    }
+
+    private fun btn_phoneme4Clicked(v: View?) {
+        Log.d(TAG, "btn_phoneme4Clicked")
+        example4?.let { Log.d(TAG, it) }
+        problemNumber += 1
+        showProblem()
+    }
+    */
 
     // 글자 읽어주기
     private fun Speech() {
@@ -214,6 +279,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             else -> {
             }
         }
+
     }
 
     override fun onDestroy() {
