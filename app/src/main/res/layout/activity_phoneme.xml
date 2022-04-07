@@ -55,7 +55,7 @@
         app:layout_constraintHorizontal_bias="0.166"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
+/.
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_phoneme"
         android:layout_width="158dp"
