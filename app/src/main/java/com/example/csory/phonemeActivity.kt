@@ -1,25 +1,14 @@
 package com.example.csory
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Button
-import android.widget.EditText
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Build
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_voice.*
 import java.util.*
-import android.speech.RecognitionListener
-import android.speech.RecognizerIntent
-import android.speech.SpeechRecognizer
-import android.widget.TextView
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import android.Manifest
 
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
@@ -164,11 +153,27 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         example3 = problems[problemNumber - 1]["btn_phoneme3"] as String?
         example4 = problems[problemNumber - 1]["btn_phoneme4"] as String?
 
-        btn_phoneme.setText(example1)
-        btn_phoneme2.setText(example2)
-        btn_phoneme3.setText(example3)
-        btn_phoneme4.setText(example4)
+        btn_phoneme?.setText(example1)
+        btn_phoneme2?.setText(example2)
+        btn_phoneme3?.setText(example3)
+        btn_phoneme4?.setText(example4)
+
+        showProblem()
     }
+    fun showProblem() {
+        question = problems[problemNumber - 1]["question"] as String?
+        answer = problems[problemNumber - 1]["answer"] as String?
+        example1 = problems[problemNumber - 1]["example1"] as String?
+        example2 = problems[problemNumber - 1]["example2"] as String?
+        example3 = problems[problemNumber - 1]["example3"] as String?
+        example4 = problems[problemNumber - 1]["example4"] as String?
+
+        btn_phoneme?.setText(example1)
+        btn_phoneme2?.setText(example2)
+        btn_phoneme3?.setText(example3)
+        btn_phoneme4?.setText(example4)
+    }
+
 
     // 글자 읽어주기
     private fun Speech() {

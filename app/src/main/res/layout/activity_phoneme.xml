@@ -48,7 +48,7 @@
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
-        android:text="음소"
+
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -65,7 +65,7 @@
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
-        android:text="음소"
+
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -82,7 +82,7 @@
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
-        android:text="음소"
+
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -99,7 +99,7 @@
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
-        android:text="음소"
+
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"
