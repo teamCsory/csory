@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_phoneme.view.*
 import kotlinx.android.synthetic.main.activity_voice.*
 import java.util.*
+import kotlin.collections.ArrayList
 
 
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
@@ -23,6 +24,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
+    var soundtext = listOf("야","아","감","어")
 
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
@@ -243,9 +245,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     // 글자 읽어주기
     private fun Speech() {
         //val text = btn_ga!!.text.toString().trim { it <= '가' }
-        tts!!.speak("가",TextToSpeech.QUEUE_FLUSH,null)
+        tts!!.speak(soundtext[problemNumber],TextToSpeech.QUEUE_FLUSH,null)
         tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(1.0.toFloat()) // 재생속도
+
         //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
 
