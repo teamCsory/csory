@@ -6,13 +6,10 @@ import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.activity_phoneme.view.*
-import kotlinx.android.synthetic.main.activity_voice.*
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
@@ -24,23 +21,24 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("야","아","감","어")
+    var soundtext = listOf("야","아","감","어","바","자","다","써","므","느")
+    var answer = listOf("가","5","6","3","6","9","8","7","5","4")
 
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 2 = ?")
-                //put("answer", "3")
-                put("example1", "1")
-                put("example2", "3")
-                put("example3", "2")
-                put("example4", "4")
+                put("answer", "가")
+                put("example1", "가")
+                put("example2", "나")
+                put("example3", "다")
+                put("example4", "라")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 2 = ?")
-                //put("answer", "5")
+                put("answer", "5")
                 put("example1", "4")
                 put("example2", "6")
                 put("example3", "5")
@@ -50,7 +48,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 3 = ?")
-                //put("answer", "6")
+                put("answer", "6")
                 put("example1", "6")
                 put("example2", "1")
                 put("example3", "5")
@@ -60,7 +58,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "0 + 3 = ?")
-                //put("answer", "3")
+                put("answer", "3")
                 put("example1", "1")
                 put("example2", "2")
                 put("example3", "4")
@@ -70,7 +68,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 2 = ?")
-                //put("answer", "6")
+                put("answer", "6")
                 put("example1", "6")
                 put("example2", "4")
                 put("example3", "2")
@@ -80,7 +78,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "5 + 4 = ?")
-                //put("answer", "9")
+                put("answer", "9")
                 put("example1", "8")
                 put("example2", "6")
                 put("example3", "7")
@@ -90,7 +88,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 4 = ?")
-                //put("answer", "8")
+                put("answer", "8")
                 put("example1", "7")
                 put("example2", "1")
                 put("example3", "8")
@@ -100,7 +98,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "2 + 5 = ?")
-                //put("answer", "7")
+                put("answer", "7")
                 put("example1", "7")
                 put("example2", "1")
                 put("example3", "5")
@@ -110,7 +108,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 4 = ?")
-                //put("answer", "5")
+                put("answer", "5")
                 put("example1", "4")
                 put("example2", "5")
                 put("example3", "0")
@@ -120,7 +118,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 1 = ?")
-                //put("answer", "4")
+                put("answer", "4")
                 put("example1", "8")
                 put("example2", "3")
                 put("example3", "4")
@@ -135,6 +133,9 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     var example2: String? = ""
     var example3: String? = ""
     var example4: String? = ""
+    var totalCorrect = 0
+    var totalCorrectTextView: TextView? = null
+    var correctIncorrectTextView: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -167,6 +168,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         showProblem()
         setButton()
 
+        totalCorrectTextView?.setText("Total Correct: 0")
+        correctIncorrectTextView?.setText("Correct/Incorrect")
+
+        //selectExample()
+
+
+
     }
     private fun showProblem() {
         //question = problems[problemNumber - 1]["question"] as String?
@@ -180,6 +188,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme2?.setText(example2)
         btn_phoneme3?.setText(example3)
         btn_phoneme4?.setText(example4)
+
+
     }
 
 
@@ -187,6 +197,18 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme")
             example1?.let { Log.d(TAG, it) }
+
+            //Log.d(TAG, example1!!)
+            if (answer!![problemNumber-1].equals(example1)) {
+                totalCorrect += 1
+                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+                //correctIncorrectTextView!!.text = "Correct"
+                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+            }
+            else {
+                //correctIncorrectTextView!!.text = "Incorrect"
+                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+            }
             problemNumber += 1
             showProblem()
         }
@@ -194,23 +216,118 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme2?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme2")
             example2?.let { Log.d(TAG, it) }
+
+            if (answer!![problemNumber-1].equals(example2)) {
+                totalCorrect += 1
+                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+                //correctIncorrectTextView!!.text = "Correct"
+                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+            }
+            else {
+                //correctIncorrectTextView!!.text = "Incorrect"
+                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+            }
+
             problemNumber += 1
             showProblem()
         }
         btn_phoneme3?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme3")
             example3?.let { Log.d(TAG, it) }
+
+            if (answer!![problemNumber-1].equals(example3)) {
+                totalCorrect += 1
+                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+                //correctIncorrectTextView!!.text = "Correct"
+                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+            }
+            else {
+                //correctIncorrectTextView!!.text = "Incorrect"
+                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+            }
+
             problemNumber += 1
             showProblem()
         }
         btn_phoneme4?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme4")
             example4?.let { Log.d(TAG, it) }
+
+            if (answer!![problemNumber-1].equals(example4)) {
+                totalCorrect += 1
+                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+                //correctIncorrectTextView!!.text = "Correct"
+                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+            }
+            else {
+                //correctIncorrectTextView!!.text = "Incorrect"
+                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+            }
+
             problemNumber += 1
             showProblem()
         }
 
+        /*
+        if (soundtext[problemNumber-1]!!.equals(answer)) {
+            totalCorrect += 1
+            //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+            //correctIncorrectTextView!!.text = "Correct"
+            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+        } else {
+            //correctIncorrectTextView!!.text = "Incorrect"
+            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+        }
+       */
+
+
     }
+    /*
+    private fun selectExample(example: String?) {
+        Log.d(TAG, example!!)
+        if (answer.equals(example)) {
+            totalCorrect += 1
+            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+            //correctIncorrectTextView!!.text = "Correct"
+            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+        }
+        else {
+            correctIncorrectTextView!!.text = "Incorrect"
+            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+        }
+        problemNumber += 1
+        showProblem()
+    }
+    */
+    /*
+    fun onBtnResult(v: View?) {
+        val strAnswer: String = answer.toString()
+        val answer = strAnswer.toInt()
+        if (answer == nResult) Toast.makeText(
+            this, nResult.toString() + " – Correct answer!",
+            Toast.LENGTH_LONG
+        ).show() else Toast.makeText(
+            this, "Wrong answer - $nResult",
+            Toast.LENGTH_LONG
+        ).show()
+        showProblem()
+    }
+    */
+
+
+    /*
+    fun selectExample(example: String?) {
+        Log.d(TAG, example!!)
+        if (answer.equals(example)) {
+            totalCorrect += 1
+            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
+            correctIncorrectTextView!!.text = "Correct"
+        } else {
+            correctIncorrectTextView!!.text = "Incorrect"
+        }
+        problemNumber += 1
+        showProblem()
+    }*/
 
     /*
     private fun btn_phonemeClicked(v: View?) {
@@ -245,9 +362,9 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     // 글자 읽어주기
     private fun Speech() {
         //val text = btn_ga!!.text.toString().trim { it <= '가' }
-        tts!!.speak(soundtext[problemNumber],TextToSpeech.QUEUE_FLUSH,null)
+        tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
         tts!!.setPitch(1.0.toFloat()) // 음량
-        tts!!.setSpeechRate(1.0.toFloat()) // 재생속도
+        tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
 
         //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
@@ -274,6 +391,9 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             // 작업 실패
             Toast.makeText(this, "TTS 작업에 실패하였습니다.", Toast.LENGTH_SHORT).show()
         }
+
+
+
     }
 
     override fun onClick(view: View) {
