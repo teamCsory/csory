@@ -12,7 +12,7 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_phoneme.*
 import java.util.Random
 import java.util.*
-
+/.
 
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
