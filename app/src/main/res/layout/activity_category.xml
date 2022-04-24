@@ -8,15 +8,63 @@
     tools:context=".CategoryActivity">
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_phoneme"
+        android:id="@+id/btn_first"
         android:layout_width="247dp"
-        android:layout_height="155dp"
-        android:layout_marginTop="200dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="124dp"
         android:layout_weight="1"
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gbold"
         android:gravity="center"
         android:text="ㅁ ㄴ ㄹ"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_second"
+        android:layout_width="247dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="252dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:text="ㄱ ㅂ ㅎ"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_third"
+        android:layout_width="247dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="380dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:text="ㄷ ㅈ"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_fourth"
+        android:layout_width="247dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="508dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:text="ㅅ ㅆ"
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"

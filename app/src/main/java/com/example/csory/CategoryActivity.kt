@@ -3,6 +3,7 @@ package com.example.csory
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import kotlinx.android.synthetic.main.activity_category.*
 import kotlinx.android.synthetic.main.activity_discrimination.*
 
 class CategoryActivity : AppCompatActivity() {
@@ -10,7 +11,7 @@ class CategoryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_category)
 
-        btn_phoneme.setOnClickListener{
+        btn_first.setOnClickListener{
             val myIntent = Intent(this, phonemeActivity::class.java)
             startActivity(myIntent)
         }
