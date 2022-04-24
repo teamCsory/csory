@@ -12,7 +12,9 @@ import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_phoneme.*
 import java.util.Random
 import java.util.*
-/.
+
+
+
 
 class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
@@ -25,6 +27,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme4: Button? = null
     var soundtext = listOf("야","아","감","어","바","자","다","써","므","느")
     var answer = listOf("가","5","6","3","6","9","8","7","5","4")
+
+
 
 
     var problems = arrayOf<HashMap<*, *>>(
