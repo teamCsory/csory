@@ -25,8 +25,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("야","아","감","어","바","자","다","써","므","느")
-    var answer = listOf("가","5","6","3","6","9","8","7","5","4")
+    var soundtext = listOf("몸","놈","돔","롬","바","자","다","써","므","느")
+    var answer = listOf("몸","놈","돔","롬","6","9","8","7","5","4")
 
 
 
@@ -35,41 +35,41 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 2 = ?")
-                put("answer", "가")
-                put("example1", "가")
-                put("example2", "나")
-                put("example3", "다")
-                put("example4", "라")
+                put("answer", "몸")
+                put("example1", "몸")
+                put("example2", "놈")
+                put("example3", "돔")
+                put("example4", "롬")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 2 = ?")
-                put("answer", "5")
-                put("example1", "4")
-                put("example2", "6")
-                put("example3", "5")
-                put("example4", "2")
+                put("answer", "놈")
+                put("example1", "몸")
+                put("example2", "놈")
+                put("example3", "돔")
+                put("example4", "롬")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 3 = ?")
-                put("answer", "6")
-                put("example1", "6")
-                put("example2", "1")
-                put("example3", "5")
-                put("example4", "4")
+                put("answer", "돔")
+                put("example1", "몸")
+                put("example2", "놈")
+                put("example3", "돔")
+                put("example4", "롬")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "0 + 3 = ?")
-                put("answer", "3")
-                put("example1", "1")
-                put("example2", "2")
-                put("example3", "4")
-                put("example4", "3")
+                put("answer", "롬")
+                put("example1", "몸")
+                put("example2", "놈")
+                put("example3", "돔")
+                put("example4", "롬")
             }
         },
         object : HashMap<Any?, Any?>() {
