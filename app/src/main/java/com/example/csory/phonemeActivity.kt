@@ -26,8 +26,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
-    var answer = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
+    var soundtext = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈","랄","날")
+    var answer = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈","랄","날")
 
 
 
@@ -117,6 +117,26 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             init {
                 //put("question", "1 + 4 = ?")
                 put("answer", "5")
+                put("example1", "말")
+                put("example2", "갈")
+                put("example3", "날")
+                put("example4", "랄")
+            }
+        },
+        object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "3 + 1 = ?")
+                put("answer", "4")
+                put("example1", "말")
+                put("example2", "갈")
+                put("example3", "날")
+                put("example4", "랄")
+            }
+        },
+        object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "3 + 1 = ?")
+                put("answer", "4")
                 put("example1", "말")
                 put("example2", "갈")
                 put("example3", "날")

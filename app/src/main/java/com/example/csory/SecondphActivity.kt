@@ -23,8 +23,8 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("혹", "복", "독", "곡", "강", "항", "방", "랑", "개", "대")
-    var answer = listOf("혹", "복", "독", "곡", "강", "항", "방", "랑", "개", "대")
+    var soundtext = listOf("혹", "복", "독", "곡", "강", "항", "방", "랑", "개", "대","배","해")
+    var answer = listOf("혹", "복", "독", "곡", "강", "항", "방", "랑", "개", "대","배","해")
 
 
     var problems = arrayOf<HashMap<*, *>>(
@@ -112,6 +112,26 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             init {
                 //put("question", "1 + 4 = ?")
                 put("answer", "5")
+                put("example1", "개")
+                put("example2", "대")
+                put("example3", "배")
+                put("example4", "해")
+            }
+        },
+        object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "3 + 1 = ?")
+                put("answer", "4")
+                put("example1", "개")
+                put("example2", "대")
+                put("example3", "배")
+                put("example4", "해")
+            }
+        },
+        object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "3 + 1 = ?")
+                put("answer", "4")
                 put("example1", "개")
                 put("example2", "대")
                 put("example3", "배")
