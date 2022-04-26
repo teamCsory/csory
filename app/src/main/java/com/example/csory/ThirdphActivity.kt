@@ -25,8 +25,8 @@ class ThirdphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
-    var answer = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
+    var soundtext = listOf("낙","학","작","닥","맛","닻","잣","밭","종","봉","공","동")
+    var answer = listOf("낙","학","작","닥","맛","닻","잣","밭","종","봉","공","동")
 
 
 
@@ -35,101 +35,120 @@ class ThirdphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 2 = ?")
-                put("answer", "몸")
-                put("example1", "몸")
-                put("example2", "놈")
-                put("example3", "돔")
-                put("example4", "롬")
+                put("answer", "낙")
+                put("example1", "낙")
+                put("example2", "닥")
+                put("example3", "학")
+                put("example4", "작")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 2 = ?")
-                put("answer", "놈")
-                put("example1", "몸")
-                put("example2", "놈")
-                put("example3", "돔")
-                put("example4", "롬")
+                put("answer", "학")
+                put("example1", "낙")
+                put("example2", "닥")
+                put("example3", "학")
+                put("example4", "작")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 3 = ?")
-                put("answer", "돔")
-                put("example1", "몸")
-                put("example2", "놈")
-                put("example3", "돔")
-                put("example4", "롬")
+                put("answer", "작")
+                put("example1", "낙")
+                put("example2", "닥")
+                put("example3", "학")
+                put("example4", "작")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "0 + 3 = ?")
-                put("answer", "롬")
-                put("example1", "몸")
-                put("example2", "놈")
-                put("example3", "돔")
-                put("example4", "롬")
+                put("answer", "닥")
+                put("example1", "낙")
+                put("example2", "닥")
+                put("example3", "학")
+                put("example4", "작")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 2 = ?")
-                put("answer", "6")
-                put("example1", "묵")
-                put("example2", "죽")
-                put("example3", "눅")
-                put("example4", "룩")
+                put("answer", "맛")
+                put("example1", "밭")
+                put("example2", "닻")
+                put("example3", "잣")
+                put("example4", "맛")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "5 + 4 = ?")
-                put("answer", "9")
-                put("example1", "묵")
-                put("example2", "죽")
-                put("example3", "눅")
-                put("example4", "룩")
+                put("answer", "닻")
+                put("example1", "밭")
+                put("example2", "닻")
+                put("example3", "잣")
+                put("example4", "맛")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 4 = ?")
-                put("answer", "8")
-                put("example1", "묵")
-                put("example2", "죽")
-                put("example3", "눅")
-                put("example4", "룩")
+                put("answer", "잣")
+                put("example1", "밭")
+                put("example2", "닻")
+                put("example3", "잣")
+                put("example4", "맛")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "2 + 5 = ?")
-                put("answer", "7")
-                put("example1", "묵")
-                put("example2", "죽")
-                put("example3", "눅")
-                put("example4", "룩")
+                put("answer", "밭")
+                put("example1", "밭")
+                put("example2", "닻")
+                put("example3", "잣")
+                put("example4", "맛")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 4 = ?")
-                put("answer", "5")
-                put("example1", "말")
-                put("example2", "갈")
-                put("example3", "날")
-                put("example4", "랄")
+                put("answer", "종")
+                put("example1", "봉")
+                put("example2", "종")
+                put("example3", "공")
+                put("example4", "동")
+            }
+        },
+        object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "1 + 4 = ?")
+                put("answer", "봉")
+                put("example1", "봉")
+                put("example2", "종")
+                put("example3", "공")
+                put("example4", "동")
+            }
+        },object : HashMap<Any?, Any?>() {
+            init {
+                //put("question", "1 + 4 = ?")
+                put("answer", "공")
+                put("example1", "봉")
+                put("example2", "종")
+                put("example3", "공")
+                put("example4", "동")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 1 = ?")
-                put("answer", "4")
-                put("example1", "말")
-                put("example2", "갈")
-                put("example3", "날")
-                put("example4", "랄")
+                put("answer", "동")
+                put("example1", "봉")
+                put("example2", "종")
+                put("example3", "공")
+                put("example4", "동")
             }
         }
     )
