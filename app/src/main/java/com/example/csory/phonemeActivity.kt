@@ -200,9 +200,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
     }
 
-/.
+
 
     private fun setButton() {
+
         btn_phoneme?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme")
             example1?.let { Log.d(TAG, it) }
@@ -210,7 +211,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             //Log.d(TAG, example1!!)
             if (answer!![problemNumber-1].equals(example1)) {
-                correct.setVisibility(View.INVISIBLE)
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
@@ -247,16 +247,28 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme2?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme2")
             example2?.let { Log.d(TAG, it) }
-
+            val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
+            val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example2)) {
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+
+                anim.duration=400
+                anim.fillAfter=false
+                correct.animation=anim
+                correct.visibility=View.VISIBLE
+                correct.visibility=View.INVISIBLE
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
                 Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                anim2.duration=400
+                anim2.fillAfter=false
+                wrong.animation=anim2
+                wrong.visibility=View.VISIBLE
+                wrong.visibility=View.INVISIBLE
             }
 
             problemNumber += 1
@@ -265,16 +277,29 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme3?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme3")
             example3?.let { Log.d(TAG, it) }
-
+            val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
+            val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example3)) {
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+
+                anim.duration=400
+                anim.fillAfter=false
+                correct.animation=anim
+                correct.visibility=View.VISIBLE
+                correct.visibility=View.INVISIBLE
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
                 Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+
+                anim2.duration=400
+                anim2.fillAfter=false
+                wrong.animation=anim2
+                wrong.visibility=View.VISIBLE
+                wrong.visibility=View.INVISIBLE
             }
 
             problemNumber += 1
@@ -283,16 +308,29 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme4?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme4")
             example4?.let { Log.d(TAG, it) }
-
+            val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
+            val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example4)) {
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+
+                anim.duration=400
+                anim.fillAfter=false
+                correct.animation=anim
+                correct.visibility=View.VISIBLE
+                correct.visibility=View.INVISIBLE
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
                 Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+
+                anim2.duration=400
+                anim2.fillAfter=false
+                wrong.animation=anim2
+                wrong.visibility=View.VISIBLE
+                wrong.visibility=View.INVISIBLE
             }
 
             problemNumber += 1
