@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.View
+import android.view.animation.TranslateAnimation
 import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
@@ -200,27 +201,47 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     }
 
 
+
     private fun setButton() {
         btn_phoneme?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme")
             example1?.let { Log.d(TAG, it) }
-
+            val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
+            val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             //Log.d(TAG, example1!!)
             if (answer!![problemNumber-1].equals(example1)) {
+                correct.setVisibility(View.INVISIBLE)
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
                 //correct.setImageResource(R.drawable.correct)
-
+                //correct.setVisibility(View.VISIBLE)
+                anim.duration=400
+                anim.fillAfter=false
+                correct.animation=anim
+                correct.visibility=View.VISIBLE
+                correct.visibility=View.INVISIBLE
+                //correct.bringToFront()
 
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
                 Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                anim2.duration=400
+                anim2.fillAfter=false
+                wrong.animation=anim2
+                wrong.visibility=View.VISIBLE
+                wrong.visibility=View.INVISIBLE
             }
+
+            //correct.visibility=View.GONE
+            //wrong.visibility=View.GONE
             problemNumber += 1
+            //fadeout()
+
             showProblem()
+
         }
 
         btn_phoneme2?.setOnClickListener() {

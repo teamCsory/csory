@@ -4,8 +4,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/purple"
+    android:animateLayoutChanges="true"
     tools:context=".MainActivity">
 
+    <ImageView
+    android:id="@+id/correct"
+    android:duration="10"
+    android:layout_width="95dp"
+    android:layout_height="95dp"
+    android:layout_marginTop="276dp"
+    android:src="@drawable/correct"
+    android:visibility="invisible"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.098"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wrong"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="276dp"
+        android:src="@drawable/wrong"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textview"
@@ -112,17 +137,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/correct"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="205dp"
-        android:background="@drawable/correct"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:visibility="invisible"
-        />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
