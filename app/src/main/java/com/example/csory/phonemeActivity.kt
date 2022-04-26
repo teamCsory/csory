@@ -337,96 +337,11 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             showProblem()
         }
 
-        /*
-        if (soundtext[problemNumber-1]!!.equals(answer)) {
-            totalCorrect += 1
-            //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            //correctIncorrectTextView!!.text = "Correct"
-            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-        } else {
-            //correctIncorrectTextView!!.text = "Incorrect"
-            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
-        }
-       */
+
 
 
     }
-    /*
-    private fun selectExample(example: String?) {
-        Log.d(TAG, example!!)
-        if (answer.equals(example)) {
-            totalCorrect += 1
-            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            //correctIncorrectTextView!!.text = "Correct"
-            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-        }
-        else {
-            correctIncorrectTextView!!.text = "Incorrect"
-            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
-        }
-        problemNumber += 1
-        showProblem()
-    }
-    */
-    /*
-    fun onBtnResult(v: View?) {
-        val strAnswer: String = answer.toString()
-        val answer = strAnswer.toInt()
-        if (answer == nResult) Toast.makeText(
-            this, nResult.toString() + " – Correct answer!",
-            Toast.LENGTH_LONG
-        ).show() else Toast.makeText(
-            this, "Wrong answer - $nResult",
-            Toast.LENGTH_LONG
-        ).show()
-        showProblem()
-    }
-    */
 
-
-    /*
-    fun selectExample(example: String?) {
-        Log.d(TAG, example!!)
-        if (answer.equals(example)) {
-            totalCorrect += 1
-            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            correctIncorrectTextView!!.text = "Correct"
-        } else {
-            correctIncorrectTextView!!.text = "Incorrect"
-        }
-        problemNumber += 1
-        showProblem()
-    }*/
-
-    /*
-    private fun btn_phonemeClicked(v: View?) {
-        Log.d(TAG, "btn_phoneme2Clicked")
-        example1?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme2Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme2Clicked")
-        example2?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme3Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme3Clicked")
-        example3?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme4Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme4Clicked")
-        example4?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-    */
 
     // 글자 읽어주기
     private fun Speech() {

@@ -26,5 +26,10 @@ class CategoryActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        btn_fourth.setOnClickListener{
+            val myIntent = Intent(this, forthphActvity::class.java)
+            startActivity(myIntent)
+        }
+
     }
 }
