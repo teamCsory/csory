@@ -16,5 +16,15 @@ class CategoryActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        btn_second.setOnClickListener{
+            val myIntent = Intent(this, SecondphActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        btn_third.setOnClickListener{
+            val myIntent = Intent(this, ThirdphActivity::class.java)
+            startActivity(myIntent)
+        }
+
     }
 }
