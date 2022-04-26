@@ -16,7 +16,7 @@ import java.util.*
 
 
 
-class forthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
+class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.OnInitListener {
 
     private var TAG = "phonemeActivity"
     private var btn_ga: Button? = null

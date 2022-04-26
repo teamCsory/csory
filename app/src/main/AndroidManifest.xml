@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Csory">
         <activity
+            android:name=".FourthphActivity"
+            android:exported="false" />
+        <activity
             android:name=".forthphActvity"
             android:exported="false" />
         <activity
