@@ -200,7 +200,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
     }
 
-
+/.
 
     private fun setButton() {
         btn_phoneme?.setOnClickListener() {
