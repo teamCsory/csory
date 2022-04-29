@@ -75,7 +75,7 @@
         android:fontFamily="@font/gmedium"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="44dp"
+        android:textSize="35dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.13"
@@ -93,7 +93,7 @@
         android:fontFamily="@font/gmedium"
         android:gravity="center"
         android:textColor="@color/black"
-        android:textSize="44dp"
+        android:textSize="35dp"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.85"
