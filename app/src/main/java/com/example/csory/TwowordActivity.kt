@@ -28,6 +28,7 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
 
 
+
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
