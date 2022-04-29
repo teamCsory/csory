@@ -22,8 +22,8 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
     private var btn_word1: Button? = null
     private var btn_word2: Button? = null
 
-    var soundtext = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈","랄","날")
-    var answer = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈","랄","날")
+    var soundtext = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
+    var answer = listOf("몸","놈","돔","롬","묵","죽","눅","룩","말","갈")
 
 
 
