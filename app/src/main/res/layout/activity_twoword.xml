@@ -85,7 +85,7 @@
         tools:ignore="OnClick" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_word1"
+        android:id="@+id/btn_word2"
         android:layout_width="163dp"
         android:layout_height="117dp"
         android:layout_marginTop="480dp"

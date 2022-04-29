@@ -4,6 +4,101 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/purple"
     tools:context=".ThreewordActivity">
+
+    <ImageView
+        android:id="@+id/correct"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="340dp"
+        android:duration="10"
+        android:src="@drawable/correct"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.101"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/wrong"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:layout_marginTop="340dp"
+        android:src="@drawable/wrong"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="350dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/malpungsquare"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="소리를 듣고\n 해당하는\n 카드를\n 선택해주세요"
+        android:textColor="@color/black"
+        android:textSize="33dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"></TextView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_ga"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="280dp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_greenplay"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_word1"
+        android:layout_width="163dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="480dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_word2"
+        android:layout_width="163dp"
+        android:layout_height="117dp"
+        android:layout_marginTop="480dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.85"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="OnClick" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
