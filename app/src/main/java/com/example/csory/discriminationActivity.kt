@@ -16,5 +16,10 @@ class discriminationActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        word.setOnClickListener{
+            val myIntent = Intent(this, WordActivity::class.java)
+            startActivity(myIntent)
+        }
+
     }
 }
