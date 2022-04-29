@@ -35,9 +35,9 @@
     <TextView
         android:id="@+id/textview"
         android:layout_width="350dp"
-        android:layout_height="190dp"
+        android:layout_height="220dp"
         android:layout_marginTop="48dp"
-        android:background="@drawable/square"
+        android:background="@drawable/malpungsquare"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
         android:text="소리를 듣고\n 해당하는\n 카드를\n 선택해주세요"
@@ -51,17 +51,18 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_ga"
-        android:layout_width="119dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="264dp"
+        android:layout_width="210dp"
+        android:layout_height="210dp"
+        android:layout_marginTop="220dp"
         android:layout_weight="1"
-        android:background="@drawable/speakercircle"
+        android:background="@drawable/btn_greenplay"
         android:fontFamily="@font/gbold"
         android:gravity="center"
         android:textColor="@color/black"
         android:textSize="44dp"
 
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
