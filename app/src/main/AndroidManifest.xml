@@ -13,6 +13,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Csory">
         <activity
+            android:name=".FourwordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ThreewordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".TwowordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WordActivity"
+            android:exported="false" />
+        <activity
             android:name=".FourthphActivity"
             android:exported="false" />
         <activity
