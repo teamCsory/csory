@@ -14,5 +14,6 @@ class TwowordActivity : AppCompatActivity() {
             val myIntent = Intent(this, WordActivity::class.java)
             startActivity(myIntent)
         }
+
     }
 }
