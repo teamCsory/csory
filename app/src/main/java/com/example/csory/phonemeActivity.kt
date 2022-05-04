@@ -223,8 +223,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
     }
 
-
-
     private fun setButton() {
 
         btn_phoneme?.setOnClickListener() {
@@ -235,6 +233,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             //Log.d(TAG, example1!!)
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
+                val nextIntent = Intent(this, ResultActivity::class.java)
+                nextIntent.putExtra("totalCorrect", totalCorrect)
+                startActivity(nextIntent)
+
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
