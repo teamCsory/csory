@@ -244,8 +244,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
                 //correct.bringToFront()
-                problemNumber += 1
-                showProblem()
 
                 val nextIntent = Intent(this, ResultActivity::class.java)
                 nextIntent.putExtra("totalCorrect", totalcorrect)
@@ -262,18 +260,16 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
 
-                problemNumber += 1
-                showProblem()
             }
 
             //correct.visibility=View.GONE
             //wrong.visibility=View.GONE
-            //problemNumber += 1
+            problemNumber += 1
             //fadeout()
 
 
 
-            //showProblem()
+            showProblem()
 
         }
 
