@@ -235,7 +235,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 totalCorrect += 1
                 val nextIntent = Intent(this, ResultActivity::class.java)
                 nextIntent.putExtra("totalCorrect", totalCorrect)
-                startActivity(nextIntent)
 
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
