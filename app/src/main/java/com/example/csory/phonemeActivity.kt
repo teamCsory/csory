@@ -224,6 +224,9 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     }
 
     private fun setButton() {
+        //val nextIntent = Intent(this, ResultActivity::class.java)
+        //nextIntent.putExtra("Correct", totalCorrect)
+        //startActivity(nextIntent)
 
         btn_phoneme?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme")
@@ -231,10 +234,9 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             //Log.d(TAG, example1!!)
+
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
-                val nextIntent = Intent(this, ResultActivity::class.java)
-                nextIntent.putExtra("totalCorrect", totalCorrect)
 
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
@@ -249,6 +251,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 //correct.bringToFront()
 
             }
+
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
                 Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
@@ -267,8 +270,11 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 showProblem()
                 }
             else{
-                val myIntent = Intent(this, ResultActivity::class.java)
-                startActivity(myIntent)
+                //val myIntent = Intent(this, ResultActivity::class.java)
+                //startActivity(myIntent)
+                val nextIntent = Intent(this, ResultActivity::class.java)
+                nextIntent.putExtra("Correct", totalCorrect)
+                startActivity(nextIntent)
             }
 
 
