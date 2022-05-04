@@ -13,5 +13,6 @@ class ResultActivity : AppCompatActivity() {
         if(intent.hasExtra("totalCorrect")){
             val totalCorrect = intent.getStringExtra("totalCorrect")
         }
+        /
     }
 }
