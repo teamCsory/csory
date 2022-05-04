@@ -19,7 +19,7 @@ class ResultActivity : AppCompatActivity() {
         setContentView(R.layout.activity_result)
 
         //var t = findViewById<TextView>(R.id.total)
-        var total = findViewById(R.id.totaltextview) as Textview
+
 
 
         //t = findViewById(R.id.total)
