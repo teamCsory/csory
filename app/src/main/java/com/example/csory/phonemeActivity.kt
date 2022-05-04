@@ -1,6 +1,7 @@
 package com.example.csory
 
 //import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -154,7 +155,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
         }
     )
-    var problemNumber = 1
+    public var problemNumber = 1
     //var question: String? = ""
     //var answer: String? = ""
     var example1: String? = ""
@@ -162,6 +163,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     var example3: String? = ""
     var example4: String? = ""
     var totalCorrect = 0
+
     var totalCorrectTextView: TextView? = null
     var correctIncorrectTextView: TextView? = null
 
@@ -223,7 +225,6 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
 
     private fun setButton() {
-
         btn_phoneme?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme")
             example1?.let { Log.d(TAG, it) }
@@ -243,6 +244,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
                 //correct.bringToFront()
+                problemNumber += 1
+                showProblem()
+
+                val nextIntent = Intent(this, ResultActivity::class.java)
+                nextIntent.putExtra("totalCorrect", totalcorrect)
+                startActivity(nextIntent)
+
 
             }
             else {
@@ -253,14 +261,19 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                problemNumber += 1
+                showProblem()
             }
 
             //correct.visibility=View.GONE
             //wrong.visibility=View.GONE
-            problemNumber += 1
+            //problemNumber += 1
             //fadeout()
 
-            showProblem()
+
+
+            //showProblem()
 
         }
 
