@@ -1,6 +1,7 @@
 package com.example.csory
 
 //import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
@@ -217,6 +218,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_phoneme3?.setText(example3)
         btn_phoneme4?.setText(example4)
 
+        if(problemNumber==13){
+            btn_phoneme?.setOnClickListener {
+                val myIntent = Intent(this, ResultActivity::class.java)
+                startActivity(myIntent)
+            }
+        }
+
 
     }
 
@@ -259,8 +267,16 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             //wrong.visibility=View.GONE
             problemNumber += 1
             //fadeout()
+            if(problemNumber<13){
+                showProblem()
+                }
+            else{
+                val myIntent = Intent(this, ResultActivity::class.java)
+                startActivity(myIntent)
+            }
 
-            showProblem()
+
+
 
         }
 
@@ -292,7 +308,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
 
             problemNumber += 1
-            showProblem()
+            if(problemNumber<13){
+                showProblem()
+            }
+            else{
+                val myIntent = Intent(this, ResultActivity::class.java)
+                startActivity(myIntent)
+            }
         }
         btn_phoneme3?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme3")
@@ -323,7 +345,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
 
             problemNumber += 1
-            showProblem()
+            if(problemNumber<13){
+                showProblem()
+            }
+            else{
+                val myIntent = Intent(this, ResultActivity::class.java)
+                startActivity(myIntent)
+            }
         }
         btn_phoneme4?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme4")
@@ -352,15 +380,24 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
             }
-
             problemNumber += 1
-            showProblem()
+            if(problemNumber<13){
+                showProblem()
+            }
+            else{
+                val myIntent = Intent(this, ResultActivity::class.java)
+                startActivity(myIntent)
+            }
+
+
+
         }
 
 
 
 
     }
+
 
 
     // 글자 읽어주기
