@@ -1,5 +1,6 @@
 package com.example.csory
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
@@ -202,7 +203,15 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
             problemNumber += 1
             //fadeout()
 
-            showProblem()
+            if(problemNumber<11){
+                showProblem()
+            }
+            else{
+                val myIntent = Intent(this, ResultwordActivity::class.java)
+                val bye:String=totalCorrect.toString()
+                myIntent.putExtra("keykey", bye)
+                startActivity(myIntent)
+            }
 
         }
 
@@ -234,7 +243,15 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
             }
 
             problemNumber += 1
-            showProblem()
+            if(problemNumber<11){
+                showProblem()
+            }
+            else{
+                val myIntent = Intent(this, ResultwordActivity::class.java)
+                val bye:String=totalCorrect.toString()
+                myIntent.putExtra("keykey", bye)
+                startActivity(myIntent)
+            }
         }
 
     }
