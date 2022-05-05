@@ -45,4 +45,3 @@
         app:layout_constraintVertical_bias="0.414"></TextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-

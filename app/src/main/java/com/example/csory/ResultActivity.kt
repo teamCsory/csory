@@ -24,12 +24,5 @@ class ResultActivity : AppCompatActivity() {
         }
 
 
-        }
-
-
-
-
-
-
-
     }
+}
