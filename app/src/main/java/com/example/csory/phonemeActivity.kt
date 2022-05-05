@@ -398,6 +398,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             if(problemNumber<13){
                 showProblem()
             }
+
             else{
                 val myIntent = Intent(this, ResultActivity::class.java)
                 val bye:String=totalCorrect.toString()
