@@ -242,6 +242,7 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 //                nextIntent.putExtra("totalCorrect", totalCorrect)
 
 
+
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
