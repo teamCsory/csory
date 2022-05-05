@@ -238,6 +238,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
 
+//                val nextIntent = Intent(this, ResultActivity::class.java)
+//                nextIntent.putExtra("totalCorrect", totalCorrect)
+
+
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
                 Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
@@ -270,11 +274,14 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 showProblem()
                 }
             else{
-                //val myIntent = Intent(this, ResultActivity::class.java)
-                //startActivity(myIntent)
-                val nextIntent = Intent(this, ResultActivity::class.java)
-                nextIntent.putExtra("Correct", totalCorrect)
-                startActivity(nextIntent)
+                val myIntent = Intent(this, ResultActivity::class.java)
+
+
+                val bye:String=totalCorrect.toString()
+
+                myIntent.putExtra("keykey", bye)
+                startActivity(myIntent)
+
             }
 
 
@@ -315,9 +322,12 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
             else{
                 val myIntent = Intent(this, ResultActivity::class.java)
+                val bye:String=totalCorrect.toString()
+                myIntent.putExtra("keykey", bye)
                 startActivity(myIntent)
             }
         }
+
         btn_phoneme3?.setOnClickListener() {
             Log.d(TAG, "btn_phoneme3")
             example3?.let { Log.d(TAG, it) }
@@ -352,6 +362,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
             else{
                 val myIntent = Intent(this, ResultActivity::class.java)
+                val bye:String=totalCorrect.toString()
+                myIntent.putExtra("keykey", bye)
                 startActivity(myIntent)
             }
         }
@@ -388,6 +400,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             }
             else{
                 val myIntent = Intent(this, ResultActivity::class.java)
+                val bye:String=totalCorrect.toString()
+                myIntent.putExtra("keykey", bye)
                 startActivity(myIntent)
             }
 
