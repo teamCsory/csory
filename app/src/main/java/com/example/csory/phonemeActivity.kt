@@ -257,8 +257,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 //correct.bringToFront()
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
+                    tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst30_1.duration=Toast.LENGTH_SHORT
                     tst30_1.view = tst30
                     tst30_1.show()
                 }
@@ -266,6 +268,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                     var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
                     tst50.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
                     tst50_1.view = tst50
                     tst50_1.show()
                 }
@@ -283,8 +287,10 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
+                    tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst30_1.duration=Toast.LENGTH_SHORT
                     tst30_1.view = tst30
                     tst30_1.show()
                 }
@@ -292,6 +298,8 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                     var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
                     tst50.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
                     tst50_1.view = tst50
                     tst50_1.show()
                 }
