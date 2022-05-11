@@ -23,6 +23,10 @@ class ResultwordActivity : AppCompatActivity() {
 
             totaltextview.text=("10문제중 $totalCorrect 문제를\n 맞췄음으로\n $percent % 의 정반응률을 보였습니다")
         }
+        wordreturn.setOnClickListener{
+            val myIntent = Intent(this, WordActivity::class.java)
+            startActivity(myIntent)
+        }
     }
 
 }
