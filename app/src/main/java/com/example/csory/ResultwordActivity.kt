@@ -29,6 +29,12 @@ class ResultwordActivity : AppCompatActivity() {
             val myIntent = Intent(this, WordActivity::class.java)
             startActivity(myIntent)
         }
+
+        comebackhome2.setOnClickListener{
+            val myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
+        }
+
     }
 
 }

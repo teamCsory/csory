@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 import kotlinx.android.synthetic.main.activity_category.*
+import kotlinx.android.synthetic.main.activity_discrimination.*
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_result.*
 
@@ -26,6 +27,11 @@ class ResultActivity : AppCompatActivity() {
         }
         phreturn.setOnClickListener{
             val myIntent = Intent(this, CategoryActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        comebackhome.setOnClickListener{
+            val myIntent = Intent(this, MainActivity::class.java)
             startActivity(myIntent)
         }
 

@@ -76,4 +76,35 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.946"></TextView>
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/comebackhome2"
+        android:layout_width="107dp"
+        android:layout_height="110dp"
+        android:background="@drawable/home_btn"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.855"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.836" />
+
+    <TextView
+        android:id="@+id/home_msg"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="처음으로"
+        android:textColor="@color/gray"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.946"></TextView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
