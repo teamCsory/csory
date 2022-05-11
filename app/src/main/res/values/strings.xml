@@ -2,5 +2,5 @@
     <string name="app_name">csory</string>
     <string name="answer_true">정답!</string>
     <string name="answer_false">오답!</string>
-    <string name="total">정답수 :${totalCorrect}</string>
+
 </resources>

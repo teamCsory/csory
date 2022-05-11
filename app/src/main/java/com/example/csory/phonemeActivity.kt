@@ -256,13 +256,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.visibility=View.INVISIBLE
                 //correct.bringToFront()
                 if(problemNumber == 3){
-                    var tst30 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
                     //tst30.setBackgroundResource(android.R.drawable.toast_frame)
-                    var tst30_1 = Toast(this)
-                    tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
-                    tst30_1.duration=Toast.LENGTH_SHORT
-                    tst30_1.view = tst30
-                    tst30_1.show()
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
                 }
                 if(problemNumber == 6){
                     var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
@@ -286,13 +286,13 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.visibility=View.INVISIBLE
 
                 if(problemNumber == 3){
-                    var tst30 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
                     //tst30.setBackgroundResource(android.R.drawable.toast_frame)
-                    var tst30_1 = Toast(this)
-                    tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
-                    tst30_1.duration=Toast.LENGTH_SHORT
-                    tst30_1.view = tst30
-                    tst30_1.show()
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
                 }
                 if(problemNumber == 6){
                     var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
@@ -340,6 +340,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
@@ -349,6 +368,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             problemNumber += 1
@@ -378,6 +416,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
@@ -388,6 +445,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             problemNumber += 1
@@ -417,6 +493,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
@@ -427,6 +522,25 @@ class phonemeActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             problemNumber += 1
             if(problemNumber<13){

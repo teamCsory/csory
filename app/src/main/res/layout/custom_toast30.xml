@@ -7,10 +7,10 @@
 
 
     <ImageView
-        android:id="@+id/dalsung_25"
+        android:id="@+id/dalsung_30"
         android:layout_width="wrap_content"
         android:layout_height="60dp"
-        android:src="@drawable/dalsung25"
+        android:src="@drawable/dalsung30"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="655dp" />

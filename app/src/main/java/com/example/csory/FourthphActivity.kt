@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.view.Gravity
 import android.view.View
 import android.view.animation.TranslateAnimation
 import android.widget.Button
@@ -233,7 +234,7 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
-                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
                 //correct.setImageResource(R.drawable.correct)
                 //correct.setVisibility(View.VISIBLE)
                 anim.duration=400
@@ -242,16 +243,52 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
                 //correct.bringToFront()
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
 
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
-                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             //correct.visibility=View.GONE
@@ -280,22 +317,60 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
-                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
-                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             problemNumber += 1
@@ -318,23 +393,61 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
-                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
-                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
 
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             problemNumber += 1
@@ -357,23 +470,61 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 totalCorrect += 1
                 //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
                 //correctIncorrectTextView!!.text = "Correct"
-                Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
             else {
                 //correctIncorrectTextView!!.text = "Incorrect"
-                Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
 
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
                 wrong.visibility=View.VISIBLE
                 wrong.visibility=View.INVISIBLE
+
+                if(problemNumber == 3){
+                    var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
+                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst25_1 = Toast(this)
+                    tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst25_1.duration=Toast.LENGTH_SHORT
+                    tst25_1.view = tst25
+                    tst25_1.show()
+                }
+                if(problemNumber == 6){
+                    var tst50 = layoutInflater.inflate(R.layout.custom_toast50, null)
+                    tst50.setBackgroundResource(android.R.drawable.toast_frame)
+                    var tst50_1 = Toast(this)
+                    tst50_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
+                    tst50_1.duration=Toast.LENGTH_SHORT
+                    tst50_1.view = tst50
+                    tst50_1.show()
+                }
             }
 
             problemNumber += 1
