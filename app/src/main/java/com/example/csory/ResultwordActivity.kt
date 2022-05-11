@@ -8,6 +8,8 @@ import android.widget.TextView
 import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_result.*
+import kotlinx.android.synthetic.main.activity_result.totaltextview
+import kotlinx.android.synthetic.main.activity_resultword.*
 
 class ResultwordActivity : AppCompatActivity() {
 
