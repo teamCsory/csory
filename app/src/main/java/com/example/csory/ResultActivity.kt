@@ -19,10 +19,10 @@ class ResultActivity : AppCompatActivity() {
             val totalCorrect = intent.getStringExtra("keykey")
             val IntCorrect = Integer.parseInt(totalCorrect)
             var kk= IntCorrect.toFloat()
-            val percent:Float = kk/12*100
+            val percent:Int = (kk/12*100).toInt()
+
             totaltextview.text=("12문제중 $totalCorrect 문제를\n 맞췄음으로\n $percent % 의 정반응률을 보였습니다")
         }
-
+        }
 
     }
-}
