@@ -23,8 +23,8 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     private var btn_word1: Button? = null
     private var btn_word2: Button? = null
 
-    var soundtext = listOf("아프리카","파프리카", "층간소음", "층간소름","마스크팩", "마스크맨","선물세트", "석굴세트","무릎통증", "무슨통증")
-    var answer = listOf("아프리카","파프리카", "층간소음", "층간소름","마스크팩", "마스크맨","선물세트", "석굴세트","무릎통증", "무슨통증")
+    var soundtext = listOf("아프리카","파프리카", "층간소음", "층간소름","마스크팩", "마스크맨","선물세트", "선굴세트","무릎통증", "무슨통증")
+    var answer = listOf("아프리카","파프리카", "층간소음", "층간소름","마스크팩", "마스크맨","선물세트", "선굴세트","무릎통증", "무슨통증")
 
 
 
