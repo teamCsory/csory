@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">csory</string>
+    <string name="app_name">듣말퀴</string>
     <string name="answer_true">정답!</string>
     <string name="answer_false">오답!</string>
 
