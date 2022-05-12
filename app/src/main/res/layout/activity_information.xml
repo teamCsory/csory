@@ -41,10 +41,10 @@
         android:background="@drawable/one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintVertical_bias="0.405" />
 
     <ImageView
         android:layout_width="40dp"
@@ -52,10 +52,10 @@
         android:background="@drawable/two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.854"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.514" />
+        app:layout_constraintVertical_bias="0.518" />
 
     <ImageView
         android:layout_width="40dp"
@@ -70,13 +70,13 @@
 
     <TextView
         android:layout_width="280dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:fontFamily="@font/gmedium"
-        android:text="조음 능력을 향상시킬 수 있어요"
+        android:gravity="center"
+        android:text="조음 능력을 \n향상시킬 수 있어요"
         android:textSize="20dp"
-
-        tools:layout_editor_absoluteX="107dp"
-        tools:layout_editor_absoluteY="286dp" />
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="282dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/greennext"

@@ -7,11 +7,12 @@
     android:background="@drawable/purple"
     tools:context=".FunctionActivity">
 
+
     <androidx.appcompat.widget.AppCompatButton
 
         android:layout_width="140dp"
         android:layout_height="70dp"
-        android:layout_marginBottom="624dp"
+        android:layout_marginBottom="612dp"
         android:layout_weight="1"
         android:background="@drawable/green_btn"
         android:fontFamily="@font/gbold"
@@ -21,9 +22,8 @@
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.136"
         app:layout_constraintStart_toStartOf="parent" />
-
 
     <androidx.appcompat.widget.AppCompatButton
 
@@ -52,6 +52,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.246" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="200dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity=""
+        android:text="소리를 듣고 맞는 카드를 골라보세요\n
+마지막에 결과를 확인하고 틀린 문항을 다시 연습해보세요"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="130dp"
+        tools:layout_editor_absoluteY="156dp" />
 
     <ImageView
         android:layout_width="175dp"
