@@ -12,18 +12,18 @@
         android:id="@+id/start"
         android:layout_width="140dp"
         android:layout_height="50dp"
-        android:layout_marginBottom="36dp"
         android:layout_weight="1"
         android:background="@drawable/start"
         android:fontFamily="@font/gbold"
         android:gravity="center"
-
         android:textColor="@color/black"
         android:textSize="18dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.94"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
 
     <ImageView
         android:id="@+id/imageView5"
@@ -46,6 +46,7 @@
         android:text="소리를 듣고 맞는 \n카드를 골라보세요\n\n
 마지막에 결과를 \n확인하고 틀린 문항을 \n다시 연습해보세요"
         android:textSize="20dp"
+        android:textColor="@color/brown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
@@ -73,6 +74,7 @@
         android:text="연습하고 싶은 \n문장을 입력하고\n\n
 소리를 듣고 따라 \n말하며 긴 문장을 \n연습해보세요"
         android:textSize="20dp"
+        android:textColor="@color/brown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.95"
