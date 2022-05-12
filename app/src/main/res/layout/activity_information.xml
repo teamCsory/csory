@@ -23,17 +23,31 @@
         android:layout_width="350dp"
         android:layout_height="500dp"
         android:background="@drawable/white"
-        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\"
-        android:textSize="20dp"
         android:fontFamily="@font/gmedium"
         android:gravity="center_horizontal"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="125dp"!""
+        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\"
+        android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.649" />
+        app:layout_constraintVertical_bias="0.575" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/greennext"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_weight="1"
+        android:background="@drawable/greennext"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.914"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.951" />
 </androidx.constraintlayout.widget.ConstraintLayout>
