@@ -78,6 +78,26 @@
         tools:layout_editor_absoluteX="65dp"
         tools:layout_editor_absoluteY="282dp" />
 
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="50dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="혼자서도 재활 훈련을\n 할 수 있어요"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="358dp" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="100dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center"
+        android:text="청능사를 만나기 어려운 \n상황에서 비대면으로\n 재활 훈련 할 수 있어요"
+        android:textSize="20dp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="443dp" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/greennext"
         android:layout_width="50dp"
