@@ -25,7 +25,7 @@
         android:background="@drawable/white"
         android:fontFamily="@font/gmedium"
         android:gravity="center_horizontal"
-        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\"
+        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\n듣말퀴 : 듣고 말하고 퀴즈!"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -33,6 +33,49 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.575" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:background="@drawable/one"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:background="@drawable/two"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.514" />
+
+    <ImageView
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:background="@drawable/three"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.645" />
+
+    <TextView
+        android:layout_width="280dp"
+        android:layout_height="30dp"
+        android:fontFamily="@font/gmedium"
+        android:text="조음 능력을 향상시킬 수 있어요"
+        android:textSize="20dp"
+
+        tools:layout_editor_absoluteX="107dp"
+        tools:layout_editor_absoluteY="286dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/greennext"
