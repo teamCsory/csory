@@ -7,11 +7,33 @@
     android:background="@drawable/purple"
     tools:context=".InformationActivity">
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:background="@drawable/guizlogo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.052" />
+
     <TextView
         android:layout_width="350dp"
         android:layout_height="500dp"
-        android:background="@drawable/"
+        android:background="@drawable/white"
+        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\"
+        android:textSize="20dp"
+        android:fontFamily="@font/gmedium"
+        android:gravity="center_horizontal"
         tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="75dp" />
+        tools:layout_editor_absoluteY="125dp"!""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.649" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
