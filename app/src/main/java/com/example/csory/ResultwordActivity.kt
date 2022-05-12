@@ -23,7 +23,11 @@ class ResultwordActivity : AppCompatActivity() {
             var kk= IntCorrect.toFloat()
             val percent:Int = (kk/10*100).toInt()
 
-            totaltextview.text=("10문제중 $totalCorrect 문제를\n 맞췄음으로\n $percent % 의 정반응률을 보였습니다")
+            //totaltextview.text=("10문제중 $totalCorrect 문제를\n 맞췄음으로\n $percent % 의 정반응률을 보였습니다")
+            totaltextview.text = ("\n\n정답수 : $totalCorrect / 10\n" +
+                    "정반응률 : $percent %\n\n" +
+                    "-----------------------\n\n" +
+                    "반복해서\n학습해보세요!")
         }
         wordreturn.setOnClickListener{
             val myIntent = Intent(this, WordActivity::class.java)

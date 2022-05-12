@@ -27,8 +27,8 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     private var btn_phoneme2: Button? = null
     private var btn_phoneme3: Button? = null
     private var btn_phoneme4: Button? = null
-    var soundtext = listOf("으","즈","쓰","스","짱","쌍","팡","상","쫑","종","송","쏭")
-    var answer = listOf("으","즈","쓰","스","짱","쌍","팡","상","쫑","종","송","쏭")
+    var soundtext = listOf("단","싼","잔","산","쎔","잼","샘","댐","선","전","썬","언")
+    var answer = listOf("단","싼","잔","산","쎔","잼","샘","댐","선","전","썬","언")
 
 
 
@@ -38,119 +38,122 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             init {
                 //put("question", "1 + 2 = ?")
                 put("answer", "으")
-                put("example1", "스")
-                put("example2", "쓰")
-                put("example3", "즈")
-                put("example4", "으")
+                put("example1", "잔")
+                put("example2", "산")
+                put("example3", "싼")
+                put("example4", "단")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 2 = ?")
                 put("answer", "즈")
-                put("example1", "스")
-                put("example2", "쓰")
-                put("example3", "즈")
-                put("example4", "으")
+                put("example1", "잔")
+                put("example2", "산")
+                put("example3", "싼")
+                put("example4", "단")
             }
+
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 3 = ?")
                 put("answer", "쓰")
-                put("example1", "스")
-                put("example2", "쓰")
-                put("example3", "즈")
-                put("example4", "으")
+                put("example1", "잔")
+                put("example2", "산")
+                put("example3", "싼")
+                put("example4", "단")
+
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "0 + 3 = ?")
                 put("answer", "스")
-                put("example1", "스")
-                put("example2", "쓰")
-                put("example3", "즈")
-                put("example4", "으")
+                put("example1", "잔")
+                put("example2", "산")
+                put("example3", "싼")
+                put("example4", "단")
             }
+
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 2 = ?")
                 put("answer", "짱")
-                put("example1", "짱")
-                put("example2", "쌍")
-                put("example3", "상")
-                put("example4", "팡")
+                put("example1", "샘")
+                put("example2", "쎔")
+                put("example3", "댐")
+                put("example4", "잼")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "5 + 4 = ?")
                 put("answer", "쌍")
-                put("example1", "짱")
-                put("example2", "쌍")
-                put("example3", "상")
-                put("example4", "팡")
+                put("example1", "샘")
+                put("example2", "쎔")
+                put("example3", "댐")
+                put("example4", "잼")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "4 + 4 = ?")
                 put("answer", "팡")
-                put("example1", "짱")
-                put("example2", "쌍")
-                put("example3", "상")
-                put("example4", "팡")
+                put("example1", "샘")
+                put("example2", "쎔")
+                put("example3", "댐")
+                put("example4", "잼")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "2 + 5 = ?")
                 put("answer", "상")
-                put("example1", "짱")
-                put("example2", "쌍")
-                put("example3", "상")
-                put("example4", "팡")
+                put("example1", "샘")
+                put("example2", "쎔")
+                put("example3", "댐")
+                put("example4", "잼")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 4 = ?")
                 put("answer", "쫑")
-                put("example1", "송")
-                put("example2", "종")
-                put("example3", "쏭")
-                put("example4", "쫑")
+                put("example1", "선")
+                put("example2", "언")
+                put("example3", "전")
+                put("example4", "썬")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 4 = ?")
                 put("answer", "종")
-                put("example1", "송")
-                put("example2", "종")
-                put("example3", "쏭")
-                put("example4", "쫑")
+                put("example1", "선")
+                put("example2", "언")
+                put("example3", "전")
+                put("example4", "썬")
             }
         },object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "1 + 4 = ?")
                 put("answer", "송")
-                put("example1", "송")
-                put("example2", "종")
-                put("example3", "쏭")
-                put("example4", "쫑")
+                put("example1", "선")
+                put("example2", "언")
+                put("example3", "전")
+                put("example4", "썬")
             }
         },
         object : HashMap<Any?, Any?>() {
             init {
                 //put("question", "3 + 1 = ?")
                 put("answer", "쏭")
-                put("example1", "송")
-                put("example2", "종")
-                put("example3", "쏭")
-                put("example4", "쫑")
+                put("example1", "선")
+                put("example2", "언")
+                put("example3", "전")
+                put("example4", "썬")
             }
         }
     )
@@ -550,7 +553,7 @@ class FourthphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         //val text = btn_ga!!.text.toString().trim { it <= '가' }
         tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
         tts!!.setPitch(1.0.toFloat()) // 음량
-        tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
+        tts!!.setSpeechRate(0.4.toFloat()) // 재생속도
 
         //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
