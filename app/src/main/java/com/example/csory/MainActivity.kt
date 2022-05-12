@@ -20,6 +20,11 @@ class MainActivity : AppCompatActivity() {
             val myIntent = Intent(this, voiceActivity::class.java)
             startActivity(myIntent)
         }
+
+        info.setOnClickListener {
+            val myIntent = Intent(this, InformationActivity::class.java)
+            startActivity(myIntent)
+        }
     }
 }
 
