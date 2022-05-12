@@ -7,11 +7,38 @@
     android:background="@drawable/purple"
     tools:context=".CategoryActivity">
 
+    <TextView
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:background="@drawable/white"
+        android:text="훈련하고자 하는 \n음소를 선택하시오"
+        android:fontFamily="@font/gmedium"
+        android:textSize="24dp"
+        android:gravity="center"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.064" />
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/check"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_first"
         android:layout_width="247dp"
         android:layout_height="110dp"
-        android:layout_marginTop="124dp"
+        android:layout_marginTop="168dp"
         android:layout_weight="1"
         android:background="@drawable/green_btn"
         android:fontFamily="@font/gbold"
@@ -24,26 +51,10 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_second"
-        android:layout_width="247dp"
-        android:layout_height="110dp"
-        android:layout_marginTop="252dp"
-        android:layout_weight="1"
-        android:background="@drawable/white_btn"
-        android:fontFamily="@font/gbold"
-        android:gravity="center"
-        android:text="ㄱ ㅂ ㅎ"
-        android:textColor="@color/black"
-        android:textSize="44dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_third"
         android:layout_width="247dp"
         android:layout_height="110dp"
-        android:layout_marginTop="380dp"
+        android:layout_marginTop="424dp"
         android:layout_weight="1"
         android:background="@drawable/green_btn"
         android:fontFamily="@font/gbold"
@@ -59,12 +70,28 @@
         android:id="@+id/btn_fourth"
         android:layout_width="247dp"
         android:layout_height="110dp"
-        android:layout_marginTop="508dp"
+        android:layout_marginTop="552dp"
         android:layout_weight="1"
         android:background="@drawable/white_btn"
         android:fontFamily="@font/gbold"
         android:gravity="center"
         android:text="ㅅ ㅆ"
+        android:textColor="@color/black"
+        android:textSize="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_second"
+        android:layout_width="247dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="296dp"
+        android:layout_weight="1"
+        android:background="@drawable/white_btn"
+        android:fontFamily="@font/gbold"
+        android:gravity="center"
+        android:text="ㄱ ㅂ ㅎ"
         android:textColor="@color/black"
         android:textSize="44dp"
         app:layout_constraintEnd_toEndOf="parent"
