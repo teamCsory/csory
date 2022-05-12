@@ -22,7 +22,7 @@
 
     <TextView
         android:layout_width="350dp"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:background="@drawable/white"
         android:fontFamily="@font/gmedium"
         android:gravity="center_horizontal"
@@ -41,7 +41,7 @@
         android:background="@drawable/one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.405" />
@@ -95,13 +95,13 @@
         android:gravity="center"
         android:text="청능사를 만나기 어려운 \n상황에서 비대면으로\n 재활 훈련 할 수 있어요"
         android:textSize="20dp"
-        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteX="77dp"
         tools:layout_editor_absoluteY="443dp" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/greennext"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:layout_weight="1"
         android:background="@drawable/greennext"
         android:fontFamily="@font/gbold"
