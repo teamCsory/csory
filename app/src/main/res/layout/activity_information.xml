@@ -45,10 +45,10 @@
         android:background="@drawable/one"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.418" />
+        app:layout_constraintVertical_bias="0.429" />
 
     <ImageView
         android:layout_width="40dp"
@@ -56,7 +56,7 @@
         android:background="@drawable/two"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.854"
+        app:layout_constraintHorizontal_bias="0.84"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.518" />
@@ -67,7 +67,7 @@
         android:background="@drawable/three"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.145"
+        app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.633" />
