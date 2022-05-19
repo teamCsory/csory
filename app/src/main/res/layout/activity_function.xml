@@ -40,7 +40,7 @@
     <TextView
         android:layout_width="210dp"
         android:layout_height="200dp"
-        android:background="@drawable/memo"
+        android:background="@drawable/memojang"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
         android:text="\n소리를 듣고 맞는 \n카드를 골라보세요\n\n
@@ -68,7 +68,7 @@
     <TextView
         android:layout_width="210dp"
         android:layout_height="200dp"
-        android:background="@drawable/memo"
+        android:background="@drawable/memojang"
         android:fontFamily="@font/gmedium"
         android:gravity="center"
         android:text="\n연습하고 싶은 \n문장을 입력하고\n\n
