@@ -15,11 +15,13 @@ class discriminationActivity : AppCompatActivity() {
         btn_phoneme.setOnClickListener{
             val myIntent = Intent(this, CategoryActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         word.setOnClickListener{
             val myIntent = Intent(this, WordActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
     }
