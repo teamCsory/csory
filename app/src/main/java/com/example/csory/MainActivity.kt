@@ -10,6 +10,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
         first.setOnClickListener{
             val myIntent = Intent(this, discriminationActivity::class.java)
             startActivity(myIntent)

@@ -36,6 +36,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_voice)
+        getWindow().setWindowAnimations(0)
 
         edit_readText = findViewById<View>(R.id.edit_readText) as EditText
         btn_speech = findViewById<View>(R.id.btn_speech) as Button

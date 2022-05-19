@@ -10,6 +10,7 @@ class discriminationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_discrimination)
+        getWindow().setWindowAnimations(0)
 
         btn_phoneme.setOnClickListener{
             val myIntent = Intent(this, CategoryActivity::class.java)
