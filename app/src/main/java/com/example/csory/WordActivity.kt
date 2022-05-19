@@ -14,16 +14,19 @@ class WordActivity : AppCompatActivity() {
         btn_twoword.setOnClickListener{
             val myIntent = Intent(this, TwowordActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         btn_threeword.setOnClickListener{
             val myIntent = Intent(this, ThreewordActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         btn_fourword.setOnClickListener{
             val myIntent = Intent(this, FourwordActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
     }
 }

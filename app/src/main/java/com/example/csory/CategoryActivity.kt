@@ -14,21 +14,25 @@ class CategoryActivity : AppCompatActivity() {
         btn_first.setOnClickListener{
             val myIntent = Intent(this, phonemeActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         btn_second.setOnClickListener{
             val myIntent = Intent(this, SecondphActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         btn_third.setOnClickListener{
             val myIntent = Intent(this, ThirdphActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         btn_fourth.setOnClickListener{
             val myIntent = Intent(this, FourthphActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
     }
