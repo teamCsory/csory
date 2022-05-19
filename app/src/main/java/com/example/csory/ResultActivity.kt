@@ -32,6 +32,7 @@ class ResultActivity : AppCompatActivity() {
         phreturn.setOnClickListener{
             val myIntent = Intent(this, CategoryActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         comebackhome.setOnClickListener{

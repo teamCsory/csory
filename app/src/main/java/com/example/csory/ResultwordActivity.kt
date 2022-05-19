@@ -32,6 +32,7 @@ class ResultwordActivity : AppCompatActivity() {
         wordreturn.setOnClickListener{
             val myIntent = Intent(this, WordActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
 
         comebackhome2.setOnClickListener{
