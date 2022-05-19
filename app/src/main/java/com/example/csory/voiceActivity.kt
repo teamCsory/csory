@@ -61,34 +61,34 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
 
     }
 
-    // 글자 읽어주기
+
     private fun Speech() {
         val text = edit_readText!!.text.toString().trim { it <= ' ' }
-        tts!!.setPitch(1.0.toFloat()) // 음량
-        tts!!.setSpeechRate(1.0.toFloat()) // 재생속도
+        tts!!.setPitch(1.0.toFloat())
+        tts!!.setSpeechRate(1.0.toFloat())
         tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
 
-            // 작업 성공
-            val language = tts!!.setLanguage(Locale.KOREAN) // 언어 설정
+
+            val language = tts!!.setLanguage(Locale.KOREAN)
             if (language == TextToSpeech.LANG_MISSING_DATA
                 || language == TextToSpeech.LANG_NOT_SUPPORTED
             ) {
 
-                // 언어 데이터가 없거나, 지원하지 않는경우
+
                 btn_speech!!.isEnabled = false
                 Toast.makeText(this, "지원하지 않는 언어입니다.", Toast.LENGTH_SHORT).show()
             } else {
 
-                // 준비 완료
+
                 btn_speech!!.isEnabled = true
             }
         } else {
 
-            // 작업 실패
+
             Toast.makeText(this, "TTS 작업에 실패하였습니다.", Toast.LENGTH_SHORT).show()
         }
     }
@@ -111,8 +111,6 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
 
     private fun requestPermission() {
         if (Build.VERSION.SDK_INT >= 23 && ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
-            // 거부해도 계속 노출됨. ("다시 묻지 않음" 체크 시 노출 안됨.)
-            // 허용은 한 번만 승인되면 그 다음부터 자동으로 허용됨.
             ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.RECORD_AUDIO), 0)
         }
     }
@@ -145,7 +143,7 @@ class voiceActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.On
             }
 
             override fun onResults(results: Bundle?) {
-                // 말을 하면 ArrayList에 단어를 넣고 textView에 단어를 이어줍니다.
+
                 val matches: ArrayList<String>? =
                     results?.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION) as ArrayList<String>
 
