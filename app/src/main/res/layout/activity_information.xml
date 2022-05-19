@@ -25,7 +25,7 @@
         android:layout_width="350dp"
         android:layout_height="400dp"
         android:background="@drawable/info_white"
-        android:fontFamily="@font/gmedium"
+        android:fontFamily="@font/gbold"
         android:gravity="center_horizontal"
         android:text="\n\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\n듣말퀴 : 듣고 말하고 퀴즈!"
         android:textColor="@color/brown"
@@ -48,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintVertical_bias="0.418" />
 
     <ImageView
         android:layout_width="40dp"
@@ -70,7 +70,7 @@
         app:layout_constraintHorizontal_bias="0.145"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintVertical_bias="0.633" />
 
     <TextView
         android:layout_width="280dp"
@@ -83,11 +83,11 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
 
-        app:layout_constraintVertical_bias="0.052" />
+        app:layout_constraintVertical_bias="0.073" />
 
     <TextView
         android:id="@+id/textView3"
@@ -118,7 +118,7 @@
         app:layout_constraintHorizontal_bias="0.587"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.671" />
+        app:layout_constraintVertical_bias="0.646" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/greennext"
