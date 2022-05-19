@@ -32,7 +32,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 2 = ?")
                 put("answer", "혹")
                 put("example1", "혹")
                 put("example2", "복")
@@ -42,7 +41,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 2 = ?")
                 put("answer", "놈")
                 put("example1", "혹")
                 put("example2", "복")
@@ -52,7 +50,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 3 = ?")
                 put("answer", "돔")
                 put("example1", "혹")
                 put("example2", "복")
@@ -62,7 +59,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "0 + 3 = ?")
                 put("answer", "롬")
                 put("example1", "혹")
                 put("example2", "복")
@@ -72,7 +68,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 2 = ?")
                 put("answer", "6")
                 put("example1", "강")
                 put("example2", "항")
@@ -82,7 +77,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "5 + 4 = ?")
                 put("answer", "9")
                 put("example1", "강")
                 put("example2", "항")
@@ -92,7 +86,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 4 = ?")
                 put("answer", "8")
                 put("example1", "강")
                 put("example2", "항")
@@ -102,7 +95,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "2 + 5 = ?")
                 put("answer", "7")
                 put("example1", "강")
                 put("example2", "항")
@@ -112,7 +104,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 4 = ?")
                 put("answer", "5")
                 put("example1", "개")
                 put("example2", "대")
@@ -122,7 +113,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
                 put("answer", "4")
                 put("example1", "개")
                 put("example2", "대")
@@ -132,7 +122,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
                 put("answer", "4")
                 put("example1", "개")
                 put("example2", "대")
@@ -142,7 +131,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
                 put("answer", "4")
                 put("example1", "개")
                 put("example2", "대")
@@ -152,9 +140,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         }
     )
     var problemNumber = 1
-
-    //var question: String? = ""
-    //var answer: String? = ""
     var example1: String? = ""
     var example2: String? = ""
     var example3: String? = ""
@@ -177,9 +162,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         btn_phoneme3 = findViewById(R.id.btn_phoneme3)
         btn_phoneme4 = findViewById(R.id.btn_phoneme4)
 
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
-
         example1 = problems[problemNumber - 1]["btn_phoneme"] as String?
         example2 = problems[problemNumber - 1]["btn_phoneme2"] as String?
         example3 = problems[problemNumber - 1]["btn_phoneme3"] as String?
@@ -196,14 +178,9 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         totalCorrectTextView?.setText("Total Correct: 0")
         correctIncorrectTextView?.setText("Correct/Incorrect")
 
-        //selectExample()
-
-
     }
 
     private fun showProblem() {
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
         example1 = problems[problemNumber - 1]["example1"] as String?
         example2 = problems[problemNumber - 1]["example2"] as String?
         example3 = problems[problemNumber - 1]["example3"] as String?
@@ -228,11 +205,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             //Log.d(TAG, example1!!)
             if (answer!![problemNumber - 1].equals(example1)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-                //correct.setImageResource(R.drawable.correct)
-                //correct.setVisibility(View.VISIBLE)
                 anim.duration = 400
                 anim.fillAfter = false
                 correct.animation = anim
@@ -241,7 +213,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 //correct.bringToFront()
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -259,8 +230,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 }
 
             } else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration = 400
                 anim2.fillAfter = false
                 wrong.animation = anim2
@@ -269,7 +238,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -287,11 +255,7 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 }
             }
 
-            //correct.visibility=View.GONE
-            //wrong.visibility=View.GONE
             problemNumber += 1
-            //fadeout()
-
             if(problemNumber<13){
                 showProblem()
             }
@@ -311,10 +275,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             val anim2 = TranslateAnimation(0f, -wrong.width.toFloat(), 0f, 0f)
             if (answer!![problemNumber - 1].equals(example2)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-
                 anim.duration = 400
                 anim.fillAfter = false
                 correct.animation = anim
@@ -323,7 +283,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -340,8 +299,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                     tst50_1.show()
                 }
             } else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration = 400
                 anim2.fillAfter = false
                 wrong.animation = anim2
@@ -350,7 +307,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -386,9 +342,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             val anim2 = TranslateAnimation(0f, -wrong.width.toFloat(), 0f, 0f)
             if (answer!![problemNumber - 1].equals(example3)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration = 400
                 anim.fillAfter = false
@@ -398,7 +351,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -415,8 +367,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                     tst50_1.show()
                 }
             } else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
 
                 anim2.duration = 400
                 anim2.fillAfter = false
@@ -426,7 +376,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -462,9 +411,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             val anim2 = TranslateAnimation(0f, -wrong.width.toFloat(), 0f, 0f)
             if (answer!![problemNumber - 1].equals(example4)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration = 400
                 anim.fillAfter = false
@@ -491,8 +437,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                     tst50_1.show()
                 }
             } else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
 
                 anim2.duration = 400
                 anim2.fillAfter = false
@@ -502,7 +446,6 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst25 = layoutInflater.inflate(R.layout.custom_toast, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst25_1 = Toast(this)
                     tst25_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst25_1.duration=Toast.LENGTH_SHORT
@@ -533,105 +476,14 @@ class SecondphActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
         }
 
-        /*
-        if (soundtext[problemNumber-1]!!.equals(answer)) {
-            totalCorrect += 1
-            //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            //correctIncorrectTextView!!.text = "Correct"
-            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-        } else {
-            //correctIncorrectTextView!!.text = "Incorrect"
-            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
-        }
-       */
-
-
     }
-    /*
-    private fun selectExample(example: String?) {
-        Log.d(TAG, example!!)
-        if (answer.equals(example)) {
-            totalCorrect += 1
-            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            //correctIncorrectTextView!!.text = "Correct"
-            Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-        }
-        else {
-            correctIncorrectTextView!!.text = "Incorrect"
-            Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
-        }
-        problemNumber += 1
-        showProblem()
-    }
-    */
-    /*
-    fun onBtnResult(v: View?) {
-        val strAnswer: String = answer.toString()
-        val answer = strAnswer.toInt()
-        if (answer == nResult) Toast.makeText(
-            this, nResult.toString() + " – Correct answer!",
-            Toast.LENGTH_LONG
-        ).show() else Toast.makeText(
-            this, "Wrong answer - $nResult",
-            Toast.LENGTH_LONG
-        ).show()
-        showProblem()
-    }
-    */
-
-
-    /*
-    fun selectExample(example: String?) {
-        Log.d(TAG, example!!)
-        if (answer.equals(example)) {
-            totalCorrect += 1
-            totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-            correctIncorrectTextView!!.text = "Correct"
-        } else {
-            correctIncorrectTextView!!.text = "Incorrect"
-        }
-        problemNumber += 1
-        showProblem()
-    }*/
-
-    /*
-    private fun btn_phonemeClicked(v: View?) {
-        Log.d(TAG, "btn_phoneme2Clicked")
-        example1?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme2Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme2Clicked")
-        example2?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme3Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme3Clicked")
-        example3?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-
-    private fun btn_phoneme4Clicked(v: View?) {
-        Log.d(TAG, "btn_phoneme4Clicked")
-        example4?.let { Log.d(TAG, it) }
-        problemNumber += 1
-        showProblem()
-    }
-    */
 
     // 글자 읽어주기
     private fun Speech() {
-        //val text = btn_ga!!.text.toString().trim { it <= '가' }
         tts!!.speak(soundtext[problemNumber - 1], TextToSpeech.QUEUE_FLUSH, null)
         tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
 
-        //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
 
     override fun onInit(status: Int) {

@@ -34,7 +34,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 2 = ?")
                 put("answer", "강자")
                 put("example1", "감자")
                 put("example2", "강자")
@@ -42,7 +41,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 2 = ?")
                 put("answer", "인형")
                 put("example1", "인영")
                 put("example2", "인형")
@@ -50,7 +48,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 3 = ?")
                 put("answer", "열쇠")
                 put("example1", "열쇠")
                 put("example2", "연쇄")
@@ -58,7 +55,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "0 + 3 = ?")
                 put("answer", "독단")
                 put("example1", "돌담")
                 put("example2", "독단")
@@ -66,7 +62,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 2 = ?")
                 put("answer", "인영")
                 put("example1", "인영")
                 put("example2", "인형")
@@ -74,7 +69,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "5 + 4 = ?")
                 put("answer", "장사")
                 put("example1", "장자")
                 put("example2", "장사")
@@ -82,7 +76,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 4 = ?")
                 put("answer", "돌담")
                 put("example1", "돌담")
                 put("example2", "독단")
@@ -90,7 +83,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "2 + 5 = ?")
                 put("answer", "연쇄")
                 put("example1", "열쇠")
                 put("example2", "연쇄")
@@ -98,7 +90,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 4 = ?")
                 put("answer", "장자")
                 put("example1", "장자")
                 put("example2", "장사")
@@ -106,7 +97,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
                 put("answer", "감자")
                 put("example1", "감자")
                 put("example2", "강자")
@@ -114,8 +104,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         }
     )
     var problemNumber = 1
-    //var question: String? = ""
-    //var answer: String? = ""
     var example1: String? = ""
     var example2: String? = ""
 
@@ -135,9 +123,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
         btn_word1 = findViewById(R.id.btn_word1)
         btn_word2 = findViewById(R.id.btn_word2)
 
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
-
         example1 = problems[problemNumber - 1]["btn_word1"] as String?
         example2 = problems[problemNumber - 1]["btn_word2"] as String?
 
@@ -154,8 +139,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
     }
 
     private fun showProblem() {
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
         example1 = problems[problemNumber - 1]["example1"] as String?
         example2 = problems[problemNumber - 1]["example2"] as String?
 
@@ -174,24 +157,16 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             example1?.let { Log.d(TAG, it) }
             val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
-            //Log.d(TAG, example1!!)
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-                //correct.setImageResource(R.drawable.correct)
-                //correct.setVisibility(View.VISIBLE)
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
-                //correct.bringToFront()
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -210,8 +185,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -220,7 +193,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -238,10 +210,7 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 }
             }
 
-            //correct.visibility=View.GONE
-            //wrong.visibility=View.GONE
             problemNumber += 1
-            //fadeout()
 
             if(problemNumber<11){
                 showProblem()
@@ -262,9 +231,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example2)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
@@ -292,8 +258,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
                 }
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -302,7 +266,6 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -337,12 +300,10 @@ class TwowordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech.
 
     // 글자 읽어주기
     private fun Speech() {
-        //val text = btn_ga!!.text.toString().trim { it <= '가' }
         tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
         tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
 
-        //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
 
     override fun onInit(status: Int) {

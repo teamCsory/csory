@@ -33,7 +33,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 2 = ?")
                 put("answer", "몸")
                 put("example1", "장난감")
                 put("example2", "장난함")
@@ -41,7 +40,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 2 = ?")
                 put("answer", "놈")
                 put("example1", "장난감")
                 put("example2", "장난함")
@@ -49,7 +47,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 3 = ?")
                 put("answer", "돔")
                 put("example1", "길찾기")
                 put("example2", "길잡이")
@@ -57,7 +54,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "0 + 3 = ?")
                 put("answer", "롬")
                 put("example1", "길찾기")
                 put("example2", "길잡이")
@@ -65,7 +61,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 2 = ?")
                 put("answer", "6")
                 put("example1", "테이프")
                 put("example2", "데이트")
@@ -73,7 +68,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "5 + 4 = ?")
                 put("answer", "9")
                 put("example1", "테이프")
                 put("example2", "데이트")
@@ -81,7 +75,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 4 = ?")
                 put("answer", "8")
                 put("example1", "동아리")
                 put("example2", "병아리")
@@ -89,7 +82,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "2 + 5 = ?")
                 put("answer", "7")
                 put("example1", "동아리")
                 put("example2", "병아리")
@@ -97,7 +89,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 4 = ?")
                 put("answer", "5")
                 put("example1", "밑그림")
                 put("example2", "빛그림")
@@ -105,7 +96,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
                 put("answer", "4")
                 put("example1", "밑그림")
                 put("example2", "빛그림")
@@ -113,8 +103,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         }
     )
     var problemNumber = 1
-    //var question: String? = ""
-    //var answer: String? = ""
     var example1: String? = ""
     var example2: String? = ""
 
@@ -134,9 +122,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
         btn_word1 = findViewById(R.id.btn_word1)
         btn_word2 = findViewById(R.id.btn_word2)
 
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
-
         example1 = problems[problemNumber - 1]["btn_word1"] as String?
         example2 = problems[problemNumber - 1]["btn_word2"] as String?
 
@@ -153,8 +138,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
     }
 
     private fun showProblem() {
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
         example1 = problems[problemNumber - 1]["example1"] as String?
         example2 = problems[problemNumber - 1]["example2"] as String?
 
@@ -176,21 +159,14 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
             //Log.d(TAG, example1!!)
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-                //correct.setImageResource(R.drawable.correct)
-                //correct.setVisibility(View.VISIBLE)
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
-                //correct.bringToFront()
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -209,8 +185,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
 
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -219,7 +193,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -237,10 +210,7 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
                 }
             }
 
-            //correct.visibility=View.GONE
-            //wrong.visibility=View.GONE
             problemNumber += 1
-            //fadeout()
 
             if(problemNumber<11){
                 showProblem()
@@ -261,9 +231,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example2)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
@@ -273,7 +240,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -291,8 +257,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
                 }
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -301,7 +265,6 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -336,12 +299,10 @@ class ThreewordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeec
 
     // 글자 읽어주기
     private fun Speech() {
-        //val text = btn_ga!!.text.toString().trim { it <= '가' }
         tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
         tts!!.setPitch(1.0.toFloat()) // 음량
         tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
 
-        //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
     }
 
     override fun onInit(status: Int) {
