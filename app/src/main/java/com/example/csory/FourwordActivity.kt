@@ -32,7 +32,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     var problems = arrayOf<HashMap<*, *>>(
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 2 = ?")
+
                 put("answer", "몸")
                 put("example1", "아프리카")
                 put("example2", "파프리카")
@@ -40,7 +40,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 2 = ?")
+
                 put("answer", "놈")
                 put("example1", "아프리카")
                 put("example2", "파프리카")
@@ -48,7 +48,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 3 = ?")
+
                 put("answer", "돔")
                 put("example1", "층간소음")
                 put("example2", "층간소름")
@@ -56,7 +56,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "0 + 3 = ?")
+
                 put("answer", "롬")
                 put("example1", "층간소음")
                 put("example2", "층간소름")
@@ -64,7 +64,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 2 = ?")
+
                 put("answer", "6")
                 put("example1", "마스크팩")
                 put("example2", "마스크맨")
@@ -72,7 +72,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "5 + 4 = ?")
+
                 put("answer", "9")
                 put("example1", "마스크팩")
                 put("example2", "마스크맨")
@@ -80,7 +80,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "4 + 4 = ?")
+
                 put("answer", "8")
                 put("example1", "선물세트")
                 put("example2", "선굴세트")
@@ -88,7 +88,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "2 + 5 = ?")
+
                 put("answer", "7")
                 put("example1", "선물세트")
                 put("example2", "선굴세트")
@@ -96,7 +96,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "1 + 4 = ?")
+
                 put("answer", "5")
                 put("example1", "무릎통증")
                 put("example2", "무슨통증")
@@ -104,7 +104,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         },
         object : HashMap<Any?, Any?>() {
             init {
-                //put("question", "3 + 1 = ?")
+
                 put("answer", "4")
                 put("example1", "무릎통증")
                 put("example2", "무슨통증")
@@ -112,8 +112,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         }
     )
     var problemNumber = 1
-    //var question: String? = ""
-    //var answer: String? = ""
+
     var example1: String? = ""
     var example2: String? = ""
 
@@ -133,8 +132,6 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         btn_word1 = findViewById(R.id.btn_word1)
         btn_word2 = findViewById(R.id.btn_word2)
 
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
 
         example1 = problems[problemNumber - 1]["btn_word1"] as String?
         example2 = problems[problemNumber - 1]["btn_word2"] as String?
@@ -150,8 +147,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
         correctIncorrectTextView?.setText("Correct/Incorrect")
     }
     private fun showProblem() {
-        //question = problems[problemNumber - 1]["question"] as String?
-        //answer = problems[problemNumber - 1]["answer"] as String?
+
         example1 = problems[problemNumber - 1]["example1"] as String?
         example2 = problems[problemNumber - 1]["example2"] as String?
 
@@ -170,23 +166,19 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             example1?.let { Log.d(TAG, it) }
             val anim = TranslateAnimation(0f,correct.width.toFloat(),0f,0f)
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
-            //Log.d(TAG, example1!!)
+
             if (answer!![problemNumber-1].equals(example1)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
-                //correct.setImageResource(R.drawable.correct)
-                //correct.setVisibility(View.VISIBLE)
+
                 anim.duration=400
                 anim.fillAfter=false
                 correct.animation=anim
                 correct.visibility=View.VISIBLE
                 correct.visibility=View.INVISIBLE
-                //correct.bringToFront()
+
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -205,8 +197,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -215,7 +206,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -233,10 +224,9 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 }
             }
 
-            //correct.visibility=View.GONE
-            //wrong.visibility=View.GONE
+
             problemNumber += 1
-            //fadeout()
+
 
             if(problemNumber<11){
                 showProblem()
@@ -257,9 +247,6 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
             val anim2 = TranslateAnimation(0f,-wrong.width.toFloat(),0f,0f)
             if (answer!![problemNumber-1].equals(example2)) {
                 totalCorrect += 1
-                //totalCorrectTextView!!.text = Integer.toString(totalCorrect)
-                //correctIncorrectTextView!!.text = "Correct"
-                //Toast.makeText(this, R.string.answer_true, Toast.LENGTH_SHORT).show()
 
                 anim.duration=400
                 anim.fillAfter=false
@@ -269,7 +256,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -287,8 +274,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
                 }
             }
             else {
-                //correctIncorrectTextView!!.text = "Incorrect"
-                //Toast.makeText(this, R.string.answer_false, Toast.LENGTH_SHORT).show()
+
                 anim2.duration=400
                 anim2.fillAfter=false
                 wrong.animation=anim2
@@ -297,7 +283,7 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
 
                 if(problemNumber == 3){
                     var tst30 = layoutInflater.inflate(R.layout.custom_toast30, null)
-                    //tst30.setBackgroundResource(android.R.drawable.toast_frame)
+
                     var tst30_1 = Toast(this)
                     tst30_1.setGravity(Gravity.BOTTOM or Gravity.CENTER, 0, 0)
                     tst30_1.duration=Toast.LENGTH_SHORT
@@ -330,36 +316,36 @@ class FourwordActivity : AppCompatActivity(), View.OnClickListener, TextToSpeech
     }
 
 
-    // 글자 읽어주기
-    private fun Speech() {
-        //val text = btn_ga!!.text.toString().trim { it <= '가' }
-        tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
-        tts!!.setPitch(1.0.toFloat()) // 음량
-        tts!!.setSpeechRate(0.5.toFloat()) // 재생속도
 
-        //tts!!.speak(text, TextToSpeech.QUEUE_FLUSH, null)
+    private fun Speech() {
+
+        tts!!.speak(soundtext[problemNumber-1],TextToSpeech.QUEUE_FLUSH,null)
+        tts!!.setPitch(1.0.toFloat())
+        tts!!.setSpeechRate(0.5.toFloat())
+
+
     }
 
     override fun onInit(status: Int) {
         if (status == TextToSpeech.SUCCESS) {
 
-            // 작업 성공
-            val language = tts!!.setLanguage(Locale.KOREAN) // 언어 설정
+
+            val language = tts!!.setLanguage(Locale.KOREAN)
             if (language == TextToSpeech.LANG_MISSING_DATA
                 || language == TextToSpeech.LANG_NOT_SUPPORTED
             ) {
 
-                // 언어 데이터가 없거나, 지원하지 않는경우
+
                 btn_ga!!.isEnabled = false
                 Toast.makeText(this, "지원하지 않는 언어입니다.", Toast.LENGTH_SHORT).show()
             } else {
 
-                // 준비 완료
+
                 btn_ga!!.isEnabled = true
             }
         } else {
 
-            // 작업 실패
+
             Toast.makeText(this, "TTS 작업에 실패하였습니다.", Toast.LENGTH_SHORT).show()
         }
 
