@@ -14,6 +14,7 @@ class InformationActivity : AppCompatActivity() {
         greennext.setOnClickListener {
             val myIntent = Intent(this, FunctionActivity::class.java)
             startActivity(myIntent)
+            overridePendingTransition(0, 0);
         }
     }
 }
