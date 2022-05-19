@@ -27,7 +27,7 @@
         android:background="@drawable/info_white"
         android:fontFamily="@font/gmedium"
         android:gravity="center_horizontal"
-        android:text="\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\n듣말퀴 : 듣고 말하고 퀴즈!"
+        android:text="\n\n난청인(청각장애인)을 위한\n청능 재활 애플리케이션\n\n듣말퀴 : 듣고 말하고 퀴즈!"
         android:textColor="@color/brown"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
